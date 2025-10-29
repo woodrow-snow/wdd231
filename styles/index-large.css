@@ -1,0 +1,55 @@
+@media only screen and (min-width:38rem) {
+    header, main, nav, footer {
+        max-width: 1000px;
+        margin: 0 auto;
+    }
+
+    .hamburger {
+        display: none;
+    }
+
+    header {
+        grid-template-columns: 40px auto;
+    }
+
+    .navigation {
+        display: block;
+    }
+
+    .navigation ul {
+        display: flex;
+        justify-content: space-evenly;
+        
+    }
+
+    .navigation li {
+        width: 100%;
+        text-align: center;
+    }
+
+    .navigation a {
+        border: solid 1px var(--accent3);
+    }
+
+    main {
+        display: grid;
+        grid-template-columns: 3fr 1fr;
+    }
+
+    main h1 {
+        grid-column: 1/3;
+    }
+
+    main section:last-child {
+        grid-column: 1/3;
+    }
+
+    #class-part {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    section img {
+        padding: 0 1rem;
+    }
+}

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WDD 231 | Woodrow Snow</title>
+    <meta name="Author" content="Woodrow J. Snow">
+    <meta name="Description" content="Landing page for WDD 231 class">
+
+    <!-- CSS Links -->
+     <link rel="stylesheet" href="styles/normalize.css">
+     <link rel="stylesheet" href="styles/index.css">
+     <link rel="stylesheet" href="styles/index-large.css">
+
+    <!-- Script Links -->
+     <script src="scripts/getdates.js" defer></script>
+     <script src="code-along-header/scripts/navigation.js" defer></script>
+     <script src="scripts/getclasses.js" defer></script>
+
+     <!-- font links -->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Turret+Road:wght@200;300;400;500;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <img src="images/sitelogo.svg" alt="Site Logo">
+        <span>Woodrow J. Snow</span>
+        <button id="ham-btn" class="hamburger" aria-label="Navigation Menu Button"></button>
+    </header>
+    <nav id="nav-bar" class="navigation">
+        <ul>
+            <li><a href="#" class="current">Home</a></li>
+            <li><a href="">Chamber</a></li>
+            <li><a href="">Final</a></li>
+        </ul>
+    </nav>
+    <main>
+        <h1>Home</h1>
+        <section>
+            <h2>About Me</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia numquam, fugit architecto commodi est omnis, accusantium atque recusandae asperiores, in rem delectus fuga facere porro!</p>
+        </section>
+        <section>
+            <h2>Student Photo</h2>
+            <img src="images/woodrow.jpg" alt="Photo of Woodrow Snow">
+        </section>
+        <section>
+            <h2>Web Certificate Courses</h2>
+            <div class="web-cert">
+                <button id="all">All</button>
+                <button id="cse">CSE</button>
+                <button id="wdd">WDD</button>
+            </div>
+            <div id="class-part"></div>
+            <p id="total-credits"></p>
+        </section>
+    </main>
+    <footer>
+        <div class="social">
+            <a href="https://www.facebook.com/woodrow.snow.2025" target="_blank"><img src="images/facebook.svg" alt="Facebook" width="16" height="16"></a>
+            <a href="https://github.com/woodrow-snow" target="_blank"><img src="images/github.svg" alt="GitHub" width="16" height="16"></a>
+            <a href="https://www.instagram.com/woodrow.snow34/" target="_blank"><img src="images/instagram.svg" alt="Instagram" width="16" height="16"></a>
+            <a href="https://www.linkedin.com/in/woodrowjsnow" target="_blank"><img src="images/linkedin.svg" alt="Linkedin" width="16" height="16"></a>
+        </div>
+        <p>&copy;<span id="currentyear"></span> &#9731; Woodrow J. Snow &#9731; Utah, United States of America</p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,56 @@
+:root {
+    /* fonts */
+    --head: Georgia, "Times New Roman", Garamound, Serif;
+    --body: Trebuchet, Tahoma, Verdana, sans-serif;
+
+    /* colors */
+    --head-color: #212e3b;
+    --card-color: hsl(124, 27%, 80%);
+}
+
+/*************************** Body elements ***************************/
+h1 {
+    text-align: center;
+    color: var(--head-color);
+    background-image: linear-gradient(to top,rgba(175, 175, 175,1), rgba(221, 221, 221, 0));
+    padding: 1rem;
+    margin: 0;
+    font-family: var(--head);
+}
+
+/*************************** prophet cards ***************************/
+#cards {
+    /* text-align: center;
+    max-width: 400px; */
+    margin: 1rem;
+    display: grid;
+    gap: 0.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+}
+
+#cards h2 {
+    color: var(--head-color);
+    font-family: var(--head);
+}
+
+#cards h3 {
+    font-family: var(--body);
+}
+
+#cards section {
+    background-color: var(--card-color);
+    border: 1px solid var(--head-color);
+    margin: 0 0 1rem 0;
+    padding: 1rem;
+}
+
+/*************************** Footer ***************************/
+footer {
+    font-family: var(--head);
+    font-size: 1.2rem;
+    margin: 1rem;
+    text-align: center;
+    background-image: linear-gradient(rgba(175, 175, 175,1), rgba(221, 221, 221, 0));
+    color: var(--head-color);
+    padding-top: 1rem;
+}

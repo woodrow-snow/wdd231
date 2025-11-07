@@ -11,12 +11,184 @@
     --body: "Zen Kurenaido", Helvetica, Arial, sans-serif;
 }
 
+body {
+    background-color: var(--accent1);
+}
+
 /*************************** header ***************************/
 header {
     background-color: var(--primary);
     display: flex;
+    padding: 1rem;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--secondary);
+    gap: 0.5rem;
+}
+
+header span{
+    font-family: var(--head);
+    font-size: x-large;
+    text-align: center;
 }
 
 header img{
-    width: 50px;
+    width: 44px;
+    background-color: var(--secondary);
+    border-radius: 1rem;
+}
+
+/*************************** hamburger ***************************/
+.hamburger {
+    display: block;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: var(--secondary);
+    font-size: 2.2rem;
+}
+
+.hamburger::before {
+    content: "\2630";
+    
+}
+
+.hamburger.show::before {
+    content: "\00D7";
+}
+
+/*************************** navigation ***************************/
+.navigation {
+    display: none;
+}
+
+.navigation.show {
+    display: block;
+}
+
+.navigation ul {
+    list-style-type: none;
+    font-size: 1.4rem;
+    font-family: var(--body);
+    font-weight: 500;
+    background-color: var(--accent2);
+    margin: 0;
+    padding: 0;
+}
+
+.navigation li {
+    padding: 0.5rem;
+    border-bottom: 1px solid var(--primary);
+}
+
+.navigation a {
+    text-decoration: none;
+    color: var(--primary);
+}
+
+.navigation a:hover {
+    color: var(--secondary);
+}
+
+.navigation a.current {
+    text-decoration: underline;
+    color: var(--secondary);
+}
+
+/*************************** main ***************************/
+
+
+/*************************** Footer ***************************/
+footer {
+    background-color: var(--primary);
+    color: var(--secondary);
+    padding: 1rem;
+}
+
+.footer-location, .personal-info{
+    display: flex;
+    flex-direction: column;
+    gap: .2rem;
+    margin: 1rem;
+    text-align: left;
+    font-size: larger;
+    font-family: var(--body);
+}
+
+.footer-location p, .personal-info p {
+    margin: 0;
+}
+
+.footer-location p:first-of-type{
+    font-weight: 800;
+}
+
+/****** social images ******/
+.Socials {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.Socials img {
+    width: 44px;
+    background-color: var(--secondary);
+    padding: 0.5rem;
+    border-radius: 1rem;
+    margin: .5rem;
+}
+
+/*************************** Larger Screens ***************************/
+@media only screen and (min-width:38rem){
+    /*************************** header ***************************/
+    .hamburger{
+        display: none;
+    }
+
+    .navigation{
+        display: block;
+        padding: 0;
+    }
+
+    .navigation ul {
+        display: flex;
+        border-radius: 1rem;
+        font-size: 1.5rem;
+        padding: .7rem;
+    }
+
+    .navigation li {
+        border-bottom: none;
+    }
+
+    header {
+        padding: 0;
+        gap: 1rem;
+    }
+
+    header span {
+        font-size: 2rem;
+    }
+
+    header img {
+        width: 56px;
+    }
+    
+    .big-header{
+        display: flex;
+        background-color: var(--primary);
+        align-items: center;
+        padding: 1rem;
+        justify-content: space-between;
+    }
+
+    /*************************** footer ***************************/
+    footer {
+        background-color: var(--primary);
+        color: var(--secondary);
+        display: flex;
+        justify-content: space-between;
+        align-items: top;
+    }
 }

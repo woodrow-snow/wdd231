@@ -8,8 +8,8 @@
     <meta name="Description" content="Here you will find information about local businesses in our area">
 
     <!-- css links -->
-    <link rel="stylesheet" src="../styles/normalize.css">
-    <link rel="stylesheet" src="styles/directory.css">
+    <link rel="stylesheet" href="../styles/normalize.css">
+    <link rel="stylesheet" href="styles/directory.css">
     
     <!-- favicon link -->
     <link rel="icon" href="dinocon.ico">
@@ -22,29 +22,31 @@
 
     <!-- script links -->
     <script src="../scripts/getdates.js" defer></script>
+    <script src="scripts/navigation.js" defer></script>
 
     <!-- font links -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=IM+Fell+French+Canon+SC&family=Zen+Kurenaido&display=swap" rel="stylesheet">
-    
-    
+    <link href="https://fonts.googleapis.com/css2?family=IM+Fell+French+Canon+SC&family=Zen+Kurenaido&display=swap" rel="stylesheet">  
 </head>
 <body>
-    <header>
-        <img src="images/site_logo.svg" alt="site logo">
-        <span>Vernal, Utah Chamber of Commerce</span>
-        <nav>
+    <div class="big-header">
+        <header>
+            <img src="images/site_logo.svg" alt="site logo">
+            <span>Vernal Chamber of Commerce</span>
+            <button id="ham-btn" class="hamburger" aria-label="Navigation Menu Button"></button>
+        </header>
+        <nav id="nav-bar" class="navigation">
             <ul>
                 <li><a href="">Home</a></li>
-                <li><a href="#" class="current">Directory</a></li>
+                <li class="current"><a href="#" class="current">Directory</a></li>
                 <li><a href="">Join</a></li>
                 <li><a href="">Discover</a></li>
             </ul>
         </nav>
-    </header>
+    </div>
     <main>
-        
+        <p></p>
     </main>
     <footer>
         <div class="footer-location">

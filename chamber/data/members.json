@@ -1,0 +1,67 @@
+{
+    "business": [
+        {
+            "name":"Rocky Mountain Insurance Service Inc.",
+            "address":"390 West Main Street",
+            "city_state_zip":"Vernal, UT 84078",
+            "phone_number":"435-789-7647",
+            "url":"https://srvins.com",
+            "image_file_name":"",
+            "membership_lvl":"1" 
+        },
+        {
+            "name":"Fake Company 1",
+            "address":"111 fake Rd.",
+            "city_state_zip":"Vernal, UT 84078",
+            "phone_number":"555-123-2345",
+            "url":"https://www.w3schools.com/js/js_json_arrays.asp",
+            "image_file_name":"",
+            "membership_lvl":"2" 
+        },
+        {
+            "name":"The Bee's Knees",
+            "address":"154 Main Street",
+            "city_state_zip":"Vernal, UT 84078",
+            "phone_number":"888-888-8888",
+            "url":"https://mybeesapp.com",
+            "image_file_name":"",
+            "membership_lvl":"3" 
+        },
+        {
+            "name":"Bobs Bow Repair",
+            "address":"1478 S 7894 W",
+            "city_state_zip":"Vernal, UT 84078",
+            "phone_number":"123-456-7890",
+            "url":"https://www.beararchery.com/?srsltid=AfmBOooVI6HLbC20oK2e7HFtwHr9SI0ksyKjxN3m8YTE4Pv-5wWrSilu",
+            "image_file_name":"",
+            "membership_lvl":"2" 
+        },
+        {
+            "name":"Sea Shantie World",
+            "address":"111 County Rd 3",
+            "city_state_zip":"Vernal, UT 84078",
+            "phone_number":"159-753-7894",
+            "url":"https://open.spotify.com/playlist/37i9dQZF1DX8shr5OgBdbQ",
+            "image_file_name":"",
+            "membership_lvl":"3" 
+        },
+        {
+            "name":"The Pro Shop",
+            "address":"110 N 500 W #1",
+            "city_state_zip":"Vernal, UT 84078",
+            "phone_number":"(435) 789-8154",
+            "url":"https://vernalproshop.com",
+            "image_file_name":"",
+            "membership_lvl":"1" 
+        },
+        {
+            "name":"Wendy's/Square Foods, Inc",
+            "address":"1120 US-40",
+            "city_state_zip":"Vernal, UT 84078",
+            "phone_number":"435-781-2222",
+            "url":"https://order.wendys.com/en_US/categories?site=menu&lang=en_US",
+            "image_file_name":"",
+            "membership_lvl":"1" 
+        }
+    ]   
+}

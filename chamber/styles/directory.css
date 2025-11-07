@@ -97,7 +97,26 @@ header img{
 }
 
 /*************************** main ***************************/
+h1 {
+    background-color: var(--accent2);
+    font-family: var(--head);
+    text-align: center;
+    padding: 1rem;
+    border-radius: 1rem;
+    margin: 1rem;
+}
 
+.buttons {
+    text-align: center;
+    margin-bottom: 1rem;
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.buttons button {
+    font-size: 1.2rem;
+}
 
 /*************************** Footer ***************************/
 footer {
@@ -140,7 +159,8 @@ footer {
 }
 
 /*************************** Larger Screens ***************************/
-@media only screen and (min-width:38rem){
+@media only screen and (min-width:900px){
+
     /*************************** header ***************************/
     .hamburger{
         display: none;

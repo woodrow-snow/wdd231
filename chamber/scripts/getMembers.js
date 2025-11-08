@@ -4,8 +4,8 @@ const url = "https://woodrow-snow.github.io/wdd231/chamber/data/members.json";
 const gridBtn = document.querySelector('#grid');
 const listBtn = document.querySelector('#list');
 
-const getMembers = async (url) => {
-    const response = await fetch(url);
+const getMembers = async (url_parm) => {
+    const response = await fetch(url_parm);
     const data = await response.json();
     console.log(data);
     return data.business;

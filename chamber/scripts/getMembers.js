@@ -1,6 +1,6 @@
 // getting elements from docuemnt
 const cardArea = document.querySelector('#member-cards');
-const url = "https://woodrow-snow.github.io/wdd231/chamber/data/members.json";
+const url = "./data/members.json";
 const gridBtn = document.querySelector('#grid');
 const listBtn = document.querySelector('#list');
 
@@ -10,34 +10,31 @@ const getMembers = async (url) => {
     return data.business;
 };
 
-const businesses = getMembers();
-
 // getting data using fetch
 
 
-function deleteCards(bool){
-    let currentlyDisplayed = [];
-    
-    if(bool){
-        currentlyDisplayed = document.querySelectorAll('.member-card');
-    }
-    else{
-        currentlyDisplayed = document.querySelectorAll('.member-line');
-    }
+function deleteCards(){
+    const DisplayedGrid = document.querySelectorAll('.member-card');
+    const DisplayedList = document.querySelectorAll('.member-line');
 
-    currentlyDisplayed.forEach(card => {
+
+    DisplayedGrid.forEach(card => {
+        card.remove();
+    });
+
+    DisplayedList.forEach(card => {
         card.remove();
     });
 }
 
 const displayMembersGrid = (companies) => {
     // deleting previous cards
-    deleteCards(true);
+    deleteCards();
 
-    companies.forEach(comp => {
+    companies.forEach((comp) => {
 
         // creating card elements
-        const compCard = document.createElemet('section');
+        const compCard = document.createElement('section');
         const name = document.createElement('a');
         const address = document.createElement('h3');
         const address2 = document.createElement('h3');
@@ -62,7 +59,7 @@ const displayMembersGrid = (companies) => {
         compCard.appendChild(memberLvl);
 
         // adding class to card
-        cardArea.classList.add('member-card');
+        compCard.classList.add('member-card');
 
         // adding card to docuemnt
         cardArea.append(compCard);
@@ -71,7 +68,7 @@ const displayMembersGrid = (companies) => {
 
 const displayMembersList = (companies) => {
     // deleting current elements
-    deleteCards(false);
+    deleteCards();
 
     companies.forEach(comp => {
 
@@ -100,12 +97,22 @@ const displayMembersList = (companies) => {
     });
 };
 
-displayMembersGrid(businesses);
+getMembers(url).then(businesses => displayMembersGrid(businesses));
 
-gridBtn.addEventListener(() => {
-    displayMembersGrid(businesses);
+gridBtn.addEventListener("click", () => {
+    getMembers(url).then(businesses => displayMembersGrid(businesses));
+
+    if(cardArea.classList.contains('card-list')){
+        cardArea.classList.remove('card-list');
+        cardArea.classList.add('card-grid');
+    }
 });
 
-listBtn.addEventListener(() => {
-    displayMembersList(businesses);
+listBtn.addEventListener("click", () => {
+    getMembers(url).then(businesses => displayMembersList(businesses));
+    
+    if(cardArea.classList.contains('card-grid')){
+        cardArea.classList.remove('card-grid');
+        cardArea.classList.add('card-list');
+    }
 });

@@ -112,10 +112,88 @@ h1 {
     display: flex;
     gap: 1rem;
     justify-content: center;
+    border-bottom: 1px solid var(--primary);
 }
 
 .buttons button {
     font-size: 1.2rem;
+}
+
+
+#grid, #list {
+    border: none;
+    background-color: var(--secondary);
+    color: var(--primary);
+    font-family: var(--head);
+    padding: .5rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+    border-radius: 1rem;
+    margin-bottom: 1rem;
+}
+
+#member-cards {
+    margin: 1rem;
+}
+
+/* card grid */
+
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 1rem;
+}
+
+.card-grid .member-card {
+    text-align: center;
+    background-color: var(--primary);
+    color: var(--secondary);
+    font-family: var(--body);
+    padding: 1rem;
+    border-radius: 1rem;
+    font-size: 1.5rem;
+}
+
+.card-grid .member-card a {
+    text-decoration: none;
+    color: var(--secondary);
+    font-weight: 600;
+    font-family: var(--head);
+}
+
+/* list cards*/
+
+.card-list {
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.card-list .member-line {
+    text-align: center;
+    background-color: var(--primary);
+    color: var(--secondary);
+    padding: 1rem;
+    font-family: var(--body);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+
+.card-list .member-line:nth-child(even){
+    background-color: var(--accent2);
+    color: var(--primary);
+}
+
+.card-list .member-line a{
+    color: var(--secondary);
+}
+
+.card-list .member-line a:hover{
+    color: var(--accent1);
 }
 
 /*************************** Footer ***************************/
@@ -209,6 +287,6 @@ footer {
         color: var(--secondary);
         display: flex;
         justify-content: space-between;
-        align-items: top;
+        align-items: start;
     }
 }

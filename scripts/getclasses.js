@@ -150,8 +150,12 @@ allBtn.addEventListener('click', () => {
 
 cseBtn.addEventListener('click', () => {
     displayCards(courses.filter(course => checkSubject(course, "CSE")));
+    
+
 });
 
 wddBtn.addEventListener('click', () => {
     displayCards(courses.filter(course => checkSubject(course, "WDD")));
+
+
 });

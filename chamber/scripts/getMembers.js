@@ -7,11 +7,9 @@ const listBtn = document.querySelector('#list');
 const getMembers = async (url) => {
     const response = await fetch(url);
     const data = await response.json();
+    console.log(data);
     return data.business;
 };
-
-// getting data using fetch
-
 
 function deleteCards(){
     const DisplayedGrid = document.querySelectorAll('.member-card');

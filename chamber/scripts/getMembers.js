@@ -1,6 +1,6 @@
 // getting elements from docuemnt
 const cardArea = document.querySelector('#member-cards');
-const url = "./data/members.json";
+const url = "https://woodrow-snow.github.io/wdd231/chamber/data/members.json";
 const gridBtn = document.querySelector('#grid');
 const listBtn = document.querySelector('#list');
 

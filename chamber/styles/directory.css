@@ -93,7 +93,6 @@ header img{
 
 .navigation a.current {
     text-decoration: underline;
-    color: var(--secondary);
 }
 
 /*************************** main ***************************/

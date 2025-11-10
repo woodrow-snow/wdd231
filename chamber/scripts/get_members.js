@@ -44,9 +44,9 @@ const displayMembersGrid = (companies) => {
         name.textContent = comp.name;
         name.setAttribute("href",comp.url);
         address.textContent = comp.address;
-        address2.textContent = comp.address2;
+        address2.textContent = comp.city_state_zip;
         phone.textContent = comp.phone_number;
-        memberLvl.textContent = `Member Level: ${comp.memberLvl}`;        
+        memberLvl.textContent = `Member Level: ${comp.membership_lvl}`;        
 
         // adding elements to card
         compCard.appendChild(name);

@@ -275,6 +275,7 @@ footer {
     .big-header{
         display: flex;
         background-color: var(--primary);
+        color: var(--primary);
         align-items: center;
         padding: 1rem;
         justify-content: space-between;

@@ -72,7 +72,43 @@ section h2 {
     margin: 0;
     border-top-left-radius: 1rem;
     border-top-right-radius: 1rem;
+    padding: 0.5rem 0;
 }
 
-/* i need more information from api's in order to finish up the 
-the rest of the css*/
+section p {
+    /* font */
+    font-family: var(--body);
+    font-size: 1.3rem;
+
+    /* colors */
+    color: var(--primary);
+
+    /* box model */
+}
+
+/*************************** current weather ***************************/
+#weather-section{
+    /* Gird */
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: auto;
+}
+
+#weather-section h2 {
+    /* making h2 span the top of element. */
+    grid-column: 1/3;
+}
+
+#weather-section img {
+    justify-self: center;
+    width: 75px;
+}
+
+#weather-info p:first-child {
+    font-weight: 800;
+}
+
+/*************************** forecast ***************************/
+#forecast p{
+    padding-left: 1rem;
+}

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home </title>
+    <meta name="author" content="Woodrow J. Snow">
+    <meta name="description" content="Welcome to the home page for the vernal chamber of commerce">
+
+    <!-- css links -->
+    <link rel="stylesheet" href="../styles/normalize.css">
+    <link rel="stylesheet" href="styles/directory.css">
+    <link rel="stylesheet" href="styles/index.css">
+    
+    <!-- favicon link -->
+    <link rel="icon" href="dinocon.ico">
+
+    <!-- facebook meta tags -->
+    <meta property="og:title" content="Home | WDD 231">
+    <meta property="og:description" content="Welcome to the home page for the vernal chamber of commerce">
+    <meta property="og:image" content="https://woodrow-snow.github.io/wdd231/chamber/imgaes/vernal.webp">
+    <meta property="og:url" content="https://woodrow-snow.github.io/wdd231/chamber/index.html">
+
+    <!-- script links -->
+    <script src="../scripts/getdates.js" defer></script>
+    <script src="scripts/navigation.js" defer></script>
+
+
+    <!-- font links -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IM+Fell+French+Canon+SC&family=Zen+Kurenaido&display=swap" rel="stylesheet">  
+</head>
+<body>
+    <div class="big-header">
+        <header>
+            <img src="images/site_logo.svg" alt="site logo">
+            <span>Vernal Chamber of Commerce</span>
+            <button id="ham-btn" class="hamburger" aria-label="Navigation Menu Button"></button>
+        </header>
+        <nav id="nav-bar" class="navigation">
+            <ul>
+                <li><a href="index.html" class="current">Home</a></li>
+                <li><a href="discover.html">Discover</a></li>
+                <li><a href="directory.html">Directory</a></li>
+                <li><a href="join.html">Join</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="podcast.html">Podcast</a></li>
+                <li><a href="events.html">Events</a></li>
+            </ul>
+        </nav>
+    </div>
+    <main>
+        <!-- hero image -->
+         <div class="hero">
+            <img src="images/vernal.webp" id="hero">
+            <a href="" id="tickets">Join Us!</a>
+         </div>
+        <h1>Home</h1>
+        <section>
+            <h2>Events</h2>
+            <!-- unordered list of links to events maybe? -->
+        </section>
+        <section id="weather-section">
+            <h2>Current Weather</h2>
+            <img id="weather-icon" src="" alt="">
+            <div id="weather-info"></div>
+        </section>
+        <section id="forecast">
+            <!-- three day weather forecast, start with today and add the next two days -->
+            <h2>Weather Forecast</h2>
+        </section>
+        <section id="spotlights"></section>
+    </main>
+    <footer>
+        <div class="footer-location">
+            <p>Vernal, Utah Chamber of Commerce</p>
+            <p>134 W Main ST</p>
+            <p>Vernal, Utah 84078</p>
+            <p>director@vernalchamber.com</p>
+            <p>(435)789-1352</p>
+        </div>
+        <div class="Socials">
+            <a href=""><img src="images/youtube.svg" alt="Youtube"></a>
+            <a href=""><img src="images/facebook.svg" alt="Facebook"></a>
+            <a href=""><img src="images/linkedin.svg" alt="Linkedin"></a>
+        </div>
+        <div class="personal-info">
+            <p>WDD231 Class Project</p>
+            <p>Woodrow Snow</p>
+            <p>&copy;<span id="currentyear"></span> Vernal, Utah Chamber of Commerce</p>
+            <p id="lastModified"></p>
+        </div>
+    </footer>
+</body>
+</html>

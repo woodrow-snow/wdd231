@@ -1,0 +1,78 @@
+:root {
+    /* colors */
+    --primary: #001514;
+    --secondary: #F4A259;
+    --accent1: #FAFAFF;
+    --accent2: #709176;
+    /* black as needed */
+
+    /* fonts */
+    --head: "IM Fell French Canon SC", "Book Antiqua", Georgia, "Times New Roman", Serif;
+    --body: "Zen Kurenaido", Helvetica, Arial, sans-serif;
+}
+
+/* smaller stuff first */
+/*************************** hero image & CTA ***************************/
+#hero {
+    width: 100%;
+}
+
+.hero {
+    /* position */
+    position: relative;
+
+    /* box model */
+    padding: 0;
+}
+
+#tickets {
+    /* font / text */
+    font-family: var(--body);
+    text-decoration: none;
+    font-size: 1.6rem;
+    
+    /* colors */
+    background-color: var(--primary);
+    color: var(--secondary);
+
+    /* box model */
+    padding: 0.5rem;
+    border-radius: 1rem;
+
+    /* positioning */
+    position: absolute;
+    right: 0.5rem;
+    bottom: 1rem;
+}
+
+
+/*************************** Basic Section layout ***************************/
+section {
+    /* colors */
+    background-color: var(--secondary);
+
+    /* box model */
+    margin: 1rem;
+    border-radius: 1rem;
+    border: 1px solid var(--primary);
+}
+
+section h2 {
+    /* font */
+    font-family: var(--head);
+    
+    /* text */
+    text-align: center;
+
+    /* colors */
+    color: var(--accent1);
+    background-color: var(--primary);
+    
+    /* box model */
+    margin: 0;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+}
+
+/* i need more information from api's in order to finish up the 
+the rest of the css*/

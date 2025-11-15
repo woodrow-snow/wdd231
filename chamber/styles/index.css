@@ -112,3 +112,26 @@ section p {
 #forecast p{
     padding-left: 1rem;
 }
+
+/*************************** member cards ***************************/
+#spotlights {
+    /* colors */
+    background-color: var(--accent1);
+    
+    /* border */
+    border: none;
+
+    /* flex */
+    display: flex;
+    flex-direction: column;
+}
+
+.business-card{
+    /* text */
+    text-align: center;
+    text-wrap:initial ;
+
+    /* border */
+    border: 1px solid var(--primary);
+    border-radius: 1rem;
+}

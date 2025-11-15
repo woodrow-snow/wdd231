@@ -14,7 +14,7 @@
             "address":"111 fake Rd.",
             "city_state_zip":"Vernal, UT 84078",
             "phone_number":"555-123-2345",
-            "url":"https://www.w3schools.com/js/js_json_arrays.asp",
+            "url":"https://www.w3schools.com",
             "image_file_name":"",
             "membership_lvl":2
         },
@@ -32,7 +32,7 @@
             "address":"1478 S 7894 W",
             "city_state_zip":"Vernal, UT 84078",
             "phone_number":"123-456-7890",
-            "url":"https://www.beararchery.com/?srsltid=AfmBOooVI6HLbC20oK2e7HFtwHr9SI0ksyKjxN3m8YTE4Pv-5wWrSilu",
+            "url":"https://www.beararchery.com",
             "image_file_name":"",
             "membership_lvl":2
         },
@@ -41,7 +41,7 @@
             "address":"111 County Rd 3",
             "city_state_zip":"Vernal, UT 84078",
             "phone_number":"159-753-7894",
-            "url":"https://open.spotify.com/playlist/37i9dQZF1DX8shr5OgBdbQ",
+            "url":"https://open.spotify.com",
             "image_file_name":"",
             "membership_lvl":3 
         },
@@ -59,7 +59,7 @@
             "address":"1120 US-40",
             "city_state_zip":"Vernal, UT 84078",
             "phone_number":"435-781-2222",
-            "url":"https://order.wendys.com/en_US/categories?site=menu&lang=en_US",
+            "url":"https://order.wendys.com",
             "image_file_name":"",
             "membership_lvl":3 
         }

@@ -29,13 +29,19 @@ export function buildBusiness(bData, sectionIn){
     logo.setAttribute('src',`images/${imgLink}`); // C:\Users\Owner\Desktop\School Documents\wdd231\chamber\images\business_default.svg
     logo.setAttribute('alt', bData.name);
 
+    // creating and adding descriptive elements to second div
+    const infoDiv = document.createElement('div');
+    infoDiv.classList.add('b-info');
+    
+    infoDiv.appendChild(phone);
+    infoDiv.appendChild(address);
+    infoDiv.appendChild(website);
+    infoDiv.appendChild(memLvl);
+
     // adding elements to div
     bCard.appendChild(name);
     bCard.appendChild(logo);
-    bCard.appendChild(phone);
-    bCard.appendChild(address);
-    bCard.appendChild(website);
-    bCard.appendChild(memLvl);
+    bCard.appendChild(infoDiv);
 
     // adding card to page
     sectionIn.append(bCard);

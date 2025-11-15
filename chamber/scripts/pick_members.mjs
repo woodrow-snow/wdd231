@@ -1,21 +1,41 @@
 // This module picks 2 or three bussiness to make cards for
 export function pickMembers(mData) {
+    const businessList = mData.business;
     const returnArry = [];
-    let count = 0;
-    do {
-        let index = getRandomIndex(0,mData.length);
-        
-        // ensureing one data entry is added at start of loop
-        if(count == 0){
-            returnArry.push(mData[index]);
-            count++;
-        }
 
-        // code for checking if item is already in the array or not
+    while(returnArry.length < 3){
+        let candidate;
 
-    } while (count < 3);   
+        do {
+            candidate = chooseMember(businessList);
+        } while (
+            candidate.membership_lvl === 1 || // reject level-1
+            returnArry.some(b => b.name === candidate.name) // reject dupliacate
+        );
+
+        returnArry.push(candidate);
+    }
+
+    console.log('Final:', returnArry)
+    return returnArry;
 }
 
 function getRandomIndex(min, max){
     return Math.floor(Math.random() * (max - min + 1)) + min;
 }
+
+function chooseMember(bList){
+    let index = getRandomIndex(0, bList.length - 1);
+    return bList[index];
+}
+
+
+
+//  -------------- notes ---------------
+// getData(chamberURL).then(members => {
+//     console.log(members.business[0].name); <-- this is how to get name 
+// });
+
+//  1 = member
+//  2 = silver
+//  3 = gold

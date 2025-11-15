@@ -1,15 +1,15 @@
-:root {
+/* :root { */
     /* colors */
-    --primary: #001514;
-    --secondary: #F4A259;
-    --accent1: #FAFAFF;
-    --accent2: #709176;
+    /* --primary: #001514; */
+    /* --secondary: #F4A259; */
+    /* --accent1: #FAFAFF; */
+    /* --accent2: #709176; */
     /* black as needed */
 
     /* fonts */
-    --head: "IM Fell French Canon SC", "Book Antiqua", Georgia, "Times New Roman", Serif;
-    --body: "Zen Kurenaido", Helvetica, Arial, sans-serif;
-}
+    /* --head: "IM Fell French Canon SC", "Book Antiqua", Georgia, "Times New Roman", Serif;
+    --body: "Zen Kurenaido", Helvetica, Arial, sans-serif; */
+/* } */
 
 /* smaller stuff first */
 /*************************** hero image & CTA ***************************/
@@ -23,6 +23,7 @@
 
     /* box model */
     padding: 0;
+    background-color: var(--primary);
 }
 
 #tickets {

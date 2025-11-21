@@ -53,5 +53,7 @@
         padding: 0 1rem;
     }
 
-
+    #course-details {
+        margin: auto 5rem;
+    }
 }

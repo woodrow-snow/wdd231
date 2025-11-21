@@ -1,9 +1,9 @@
 :root {
     /* Colors */
-    --primary-color: #4DA167;
-    --secondary-color: #4E6E5D;
+    --primary-color: #4ea268;
+    --secondary-color: #4e6e5d;
     --accent1: #FFCAB1;
-    --accent2: #1E1E24;
+    --accent2: #1e1e24;
     --accent3: #3BC14A ;
     --border-bottom-color: var(--accent3);
 
@@ -188,4 +188,34 @@ footer p:last-child {
     text-align: center;
     font-family: var(--body-font);
     font-size: larger;
+}
+
+/*************************** Modal ***************************/
+#course-details {
+    margin: auto 1rem ;
+    text-align: center;
+
+    /* border */
+    border-color: var(--accent2);
+    
+}
+::backdrop {
+    background-color: rgba(78, 110, 93, 0.7);
+}
+
+#course-details h2,h3{
+    /* font */
+    font-family: var(--head-font);
+
+    /* colors */
+    background-color: var(--accent3);
+    color: var(--accent2);
+
+    /* box Model */
+    padding: 0.5rem;
+}
+
+#course-details p {
+    /* font */
+    font-family: var(--body-font);
 }

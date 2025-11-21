@@ -102,6 +102,10 @@ function displayCards(fCourses){
         
         // adding course to courseSection
         courseSection.appendChild(courseCard);
+
+        courseCard.addEventListener("click", () => {
+            displayCourseDetails(course);
+        });
     });
 
     // adding credit information
@@ -159,3 +163,31 @@ wddBtn.addEventListener('click', () => {
 
 
 });
+
+
+
+// getting elements from document
+const modal = document.querySelector('#course-details');
+
+function displayCourseDetails(course){
+    // making sure modal is empty
+    modal.innerHTML = '';
+
+    // adding content to modal
+    modal.innerHTML = `
+        <button id="closeModal">❌</button>
+        <h2>${course.subject} ${course.number}</h2>
+        <h3>${course.title}</h3>
+        <p><strong>Credits</strong>: ${course.credits}</p>
+        <p><strong>Certificate</strong>: ${course.certificate}</p>
+        <p>${course.description}</p>
+        <p><strong>Technologies</strong>: ${course.technology.join(', ')}</p>
+    `;
+    modal.showModal();
+
+    const closeModal = document.querySelector('#closeModal');
+
+    closeModal.addEventListener("click", () => {
+        modal.close();
+    });
+}

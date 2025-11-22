@@ -1,0 +1,28 @@
+h2 {
+    /* colors */
+    background-color: var(--primary);
+    color: var(--accent1);
+
+    /* box model */
+    border-radius: 1rem;
+    margin: auto 2rem;
+    padding: 0.5rem;
+
+    /* text */
+    text-align: center;
+
+    /* font */
+    font-family: var(--head);
+}
+
+p {
+    /* font */
+    font-family: var(--body);
+    font-weight: 600;
+
+    /* box model */
+    padding-left: 2.5rem;
+
+    /* color */
+    color: var(--primary);
+}

@@ -1,0 +1,333 @@
+:root {
+    --second-lighter: rgba(244, 161, 89, 0.226);
+}
+
+h2{
+    /* colors */
+    background-color: var(--primary);
+    color: var(--accent1);
+
+    /* text */
+    text-align: center;
+
+    /* font */
+    font-family: var(--head);
+
+    /* box model */
+    margin: 1.5rem;
+    border-radius: 1rem;
+    padding: 0.5rem;
+}
+
+/*************************** Form ***************************/
+form {
+    /* box model */
+    margin: 2rem;
+    
+    /* font */
+    font-family: var(--body);
+    font-weight: 600;
+}
+
+fieldset {
+    /* border */
+    border: 1px solid var(--primary);
+    
+    /* Flex */
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+
+    /* box model */
+    padding: 1rem;
+}
+
+fieldset label {
+    font-size: large;
+}
+
+legend {
+    /* font */
+    font-size: x-large;
+
+    /* color */
+    color: var(--primary);
+
+    /* box model */
+    padding: 5px;
+}
+
+#contact-info #email-label{
+    /* flex */
+    display: flex;
+    flex-direction: column;
+}
+
+textarea,
+input[type="text"], 
+input[type="email"], 
+input[type="tel"] {
+    width: 97%;
+}
+
+input[type="submit"] {
+    /* box model */
+    display: block;
+    margin: 1rem auto;
+    border: none;
+    border-radius: 1rem;
+    padding: 1rem;
+
+    /* font */
+    font-family: var(--head);
+    font-size: 1.5rem;
+
+    /* color */
+    /* background-color: var(--primary); */
+    background-image: linear-gradient(var(--primary),var(--accent2));
+    color: var(--accent1);
+}
+
+#contact-info, #OrgInfo {
+    margin-bottom: 1.5rem;
+}
+
+/* Membership level box */
+#member-lvl-field label input {
+    /* box model */
+    margin-right: 8px;
+
+    /* increasing scale */
+    transform: scale(1.2);
+}
+
+#member-lvl-field label{
+    height: 44px;
+}
+
+#member-lvl-field{
+    /* flex */
+    display: flex;
+    justify-content: center;
+}
+
+/* Required */
+form fieldset input:required {
+    border: solid 1px var(--secondary);
+}
+
+form fieldset input:required:valid {
+    border: solid 1px var(--accent2);
+}
+
+.required-info {
+    /* text */
+    text-align: center;
+
+    /* font */
+    font-family: var(--body);
+    font-weight: 600;
+
+    /* color */
+    background-color: var(--primary);
+    color: var(--accent1);
+
+    /* box model */
+    padding: 0.5rem;
+    margin: auto 2.5rem;
+    border-radius: 1rem;
+}
+
+.required-info span {
+    color: var(--secondary);
+}
+
+/*************************** Level Cards ***************************/
+.level-card {
+    /* text */
+    text-align: center;
+
+    /* colors */
+    background-color: var(--accent2);
+    color: var(--primary);
+    
+    /* box model */
+    margin: auto 2rem 1rem;
+    border-radius: 1rem;
+    padding: 0.5rem;
+}
+
+.level-card h3 {
+    font-family: var(--head);
+    margin: 0 0 1rem 0;
+}
+
+.level-card button {
+    /* font */
+    font-family: var(--body);
+    font-weight: 600;
+
+    /* box model */
+    border: solid 2px var(--primary);
+    border-radius: 1rem;
+    padding: 0.5rem;
+    
+    /* colors */
+    background-color: var(--secondary);
+    color: var(--primary);
+}
+
+/*************************** Dialog ***************************/
+dialog ul {
+    /* text */
+    text-align: left;
+
+    /* font */
+    font-family: var(--body);
+    font-weight: 600;
+}
+
+dialog {
+    border-radius: 1rem;
+    border-color: var(--primary);
+}
+::backdrop {
+    background-color: var(--second-lighter);
+}
+
+dialog h3{
+    /* colors */
+    background-color: var(--secondary);
+    color: var(--primary);
+
+    /* box model */
+    border-radius: 1rem;
+    padding: 0.5rem;
+}
+
+dialog p {
+    font-family: var(--body);
+    font-weight: 600;
+}
+
+/*************************** Animations for level cards ***************************/
+/* non profit */
+@keyframes fadeInAndOut{
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.7;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.np-card {
+    animation-name: fadeInAndOut;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+}
+
+/* bronze */
+@keyframes changeBronze{
+    0% {
+        background-color: var(--accent2);
+    }
+
+    50% {
+        background-color: #49371B;
+        color: var(--accent1);
+        opacity: 0.7;
+    }
+
+    100% {
+        background-color: var(--accent2);
+        opacity: 1;
+    }
+}
+
+.bronze-card {
+    animation-name: changeBronze;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+}
+
+/* Silver */
+@keyframes changeSilver{
+    0% {
+        background-color: var(--accent2);
+    }
+
+    50% {
+        background-color: #C0C0C0;
+        opacity: 0.7;
+    }
+
+    100% {
+        background-color: var(--accent2);
+        opacity: 1;
+    }
+}
+
+.silver-card {
+    animation-name: changeSilver;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+}
+
+/* Gold */
+@keyframes changeGold{
+    0% {
+        background-color: var(--accent2);
+    }
+
+    50% {
+        background-color: #D4AF37;
+        opacity: 0.7;
+    }
+
+    100% {
+        background-color: var(--accent2);
+        opacity: 1;
+    }
+}
+
+.gold-card {
+    animation-name: changeGold;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+}
+
+/* bigger screens */
+@media only screen and (min-width:900px){
+    .fieldsets {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+        margin: 0;
+        padding: 0;
+        height: 100%;
+    }
+
+    main{
+        max-width: 1300px;
+        margin: 0 auto;
+    }
+
+    #member-level-cards {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        gap: 1rem;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #member-level-cards h2 {
+        grid-column: 1/5;
+    }
+}

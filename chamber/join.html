@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join | Vernal Chamber of Commerce</title>
+    <meta name="author" content="Woodrow J. Snow">
+    <meta name="description" content="Welcome to the Join page for the Vernal Chamber of commerce. Here you can join our member list">
+
+    <!-- css links -->
+    <link rel="stylesheet" href="../styles/normalize.css">
+    <link rel="stylesheet" href="styles/directory.css">
+    <link rel="stylesheet" href="styles/join.css">
+    
+    <!-- favicon link -->
+    <link rel="icon" href="dinocon.ico">
+
+    <!-- facebook meta tags -->
+    <meta property="og:title" content="Join | WDD 231">
+    <meta property="og:description" content="Welcome to the Join page for the Vernal Chamber of commerce. Here you can join our member list">
+    <meta property="og:image" content="https://woodrow-snow.github.io/wdd231/chamber/imgaes/vernal.webp">
+    <meta property="og:url" content="https://woodrow-snow.github.io/wdd231/chamber/join.html">
+
+    <!-- script links -->
+    <script src="../scripts/getdates.js" defer></script>
+    <script src="scripts/navigation.js" defer></script>
+    <script type="module" src="scripts/join/working_script.mjs"></script>
+
+    <!-- font links -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IM+Fell+French+Canon+SC&family=Zen+Kurenaido&display=swap" rel="stylesheet">  
+</head>
+<body>
+    <div class="big-header">
+        <header>
+            <img src="images/site_logo.svg" alt="site logo">
+            <span>Vernal Chamber of Commerce</span>
+            <button id="ham-btn" class="hamburger" aria-label="Navigation Menu Button"></button>
+        </header>
+        <nav id="nav-bar" class="navigation">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="discover.html">Discover</a></li>
+                <li><a href="directory.html">Directory</a></li>
+                <li><a href="join.html"  class="current">Join</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="podcast.html">Podcast</a></li>
+                <li><a href="events.html">Events</a></li>
+            </ul>
+        </nav>
+    </div>
+    <main>
+        <h1>Join Us!</h1>
+        <!-- form for joining members list -->
+        <h2>Register as a Member!</h2>
+        <p class="required-info">Any field in <span>this color</span> is required</p>
+       <form method="GET" action="thankyou.html">
+        <div class="fieldsets">
+            <fieldset id="contact-info">
+                <legend>Contact Information</legend>
+                <label for="fname">First Name:<input id="fname" name="fname" title="fname" type="text" required autocomplete="given-name"></label>
+                <label for="lname">Last Name:<input id="lname" name="lname" title="lname" type="text" required  autocomplete="family-name"></label>
+                <label for="email" id="email-label">Email:<input id="email" name="email" title="email" required type="email" autocomplete="email" placeholder="your_email@email.com"></label>
+                <label for="phone">Phone Number:<input type="tel" required id="phone" name="phone" title="phone" autocomplete="tel"></label>
+            </fieldset>
+            <fieldset id="OrgInfo">
+                <legend>Organization Information</legend>
+                <p id="errorMSG" style="display: none;">Your title must contain 7 character, have no special characters expect for hypens(-), spaces, and no numbers.</p>
+                <label for="orgTitle">Organizational Title:<input id="orgTitle" name="orgTitle" title="orgTitle" type="text" autocomplete="organization-title"></label> 
+                <label for="orgName">Business Name:<input type="text" required id="orgName" name="orgName" title="orgName" autocomplete="organization"></label>
+                <label for="description">Description:<textarea id="description" title="description" name="description"></textarea></label>
+            </fieldset>
+            <fieldset id="member-lvl-field">
+                <legend>Membership Level</legend>
+                <label for="np"><input type="radio" id="np" name="memberLvl" value="np">Non-profit</label>
+                <label for="bronze"><input type="radio" id="bronze" name="memberLvl" value="bronze">Bronze</label>
+                <label for="silver"><input type="radio" id="silver" name="memberLvl" value="silver">Silver</label>
+                <label for="gold"><input type="radio" id="gold" name="memberLvl" value="gold">Gold</label>
+            </fieldset>
+        </div>
+        <input type="hidden" name="timestamp" title="timestamp" id="timestamp">
+        <input type="submit" value="Register" id="submit">
+       </form>
+       <!-- member ship level cards -->
+        <section id="member-level-cards">
+            <h2>Membership Levels</h2>
+            <div class="level-card np-card">
+                <h3>Non Profit Level</h3>
+                <button>Learn More</button>
+                <dialog>
+                    <h2>Non Profit Membership Level</h2>
+                    <h3>Cost</h3>
+                    <p>None!</p>
+                    <h3>Benefits</h3>
+                    <ul>
+                        <li>Connection</li>
+                        <li>Collaboration</li>
+                        <li>Visability within our Netword</li>
+                        <li>Access to Resources</li>
+                        <li>Opportunities to share your mission</li>
+                    </ul> 
+                </dialog>
+            </div>
+            <div class="level-card bronze-card">
+                <h3>Bronze Level</h3>
+                <button>Learn More</button>
+                <dialog>
+                    <h2>Bronze Membership Level</h2>
+                    <h3>Cost</h3>
+                    <p>$1,000.00 USD Annually</p>
+                    <h3>Benefits</h3>
+                    <ul>
+                        <li>Standard Listing</li>
+                        <li>Proud Member badge</li>
+                        <li>1 welcome post on Social media</li>
+                        <li>1 Newsletter Visability Entry</li>
+                        <li>Inviation to Networking events</li>
+                        <li>Discounted pricing for booths at expos</li>
+                        <li>Access to chamber support</li>
+                    </ul> 
+                </dialog>
+            </div>
+            <div class="level-card silver-card">
+                <h3>Silver Level</h3>
+                <button>Learn More</button>
+                <dialog>
+                    <h2>Silver Membership Level</h2>
+                    <h3>Cost</h3>
+                    <p>$1,500.00 USD Annually</p>
+                    <h3>Benefits</h3>
+                    <ul>
+                        <li>Enchanced Listing</li>
+                        <li>Enchanced Branding package</li>
+                        <li>2-4 posts per year on social media</li>
+                        <li>Website promotion</li>
+                        <li>1-2 free tickets per year for events</li>
+                        <li>Discounted pricing + priority selection for booths at expos</li>
+                        <li>Business coaching</li>
+                        <li>Access to Chamber Support</li>
+                    </ul> 
+                </dialog>
+            </div>
+            <div class="level-card gold-card">
+                <h3>Gold Level</h3>
+                <button>Learn More</button>
+                <dialog>
+                    <h2>Gold Membership Level</h2>
+                    <h3>Cost</h3>
+                    <p>$2,500.00 USD Annually</p>
+                    <h3>Benefits</h3>
+                    <ul>
+                        <li>Premium top placement listing</li>
+                        <li>Featured member branding at events</li>
+                        <li>Monthly spotlights + featured campaigns</li>
+                        <li>Dedicated article or spotlight feature</li>
+                        <li>Website promotion</li>
+                        <li>Multiple free event ticket + VIP seating</li>
+                        <li>Complimentary booth at major expos</li>
+                        <li>Dedicated Chamber representative</li>
+                        <li>Access to Chamber Support</li>
+                    </ul> 
+                </dialog>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-location">
+            <p>Vernal, Utah Chamber of Commerce</p>
+            <p>134 W Main ST</p>
+            <p>Vernal, Utah 84078</p>
+            <p>director@vernalchamber.com</p>
+            <p>(435)789-1352</p>
+        </div>
+        <div class="Socials">
+            <a href=""><img src="images/youtube.svg" alt="Youtube"></a>
+            <a href=""><img src="images/facebook.svg" alt="Facebook"></a>
+            <a href=""><img src="images/linkedin.svg" alt="Linkedin"></a>
+        </div>
+        <div class="personal-info">
+            <p>WDD231 Class Project</p>
+            <p>Woodrow Snow</p>
+            <p>&copy;<span id="currentyear"></span> Vernal, Utah Chamber of Commerce</p>
+            <p id="lastModified"></p>
+        </div>
+    </footer>
+</body>
+</html>

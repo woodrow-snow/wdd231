@@ -3,10 +3,6 @@
 import { addListenerToMemLvl } from "./open_member_modal.mjs";
 import { submitForm } from "./submit_form.mjs";
 
-// getting elements form doc
-
-
-
 // adding event listeners to membership levels learn more button
 addListenerToMemLvl();
 

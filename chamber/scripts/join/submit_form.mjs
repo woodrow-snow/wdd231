@@ -9,13 +9,13 @@ export function submitForm(){
     const errorMSG = document.querySelector('#errorMSG');
 
     form.addEventListener('submit', (event) => {
-        if(!checkTitle(orgTitle.value)) {
-            event.preventDefault(); // preventing form from submitting
-            errorMSG.style.display = 'block';
-            orgTitle.style.borderColor = 'var(--secondary)';
-        } else {
-            errorMSG.style.display = 'none';
-        }
+        // if(!checkTitle(orgTitle.value)) {
+        //     event.preventDefault(); // preventing form from submitting
+        //     errorMSG.style.display = 'block';
+        //     orgTitle.style.borderColor = 'var(--secondary)';
+        // } else {
+        //     errorMSG.style.display = 'none';
+        // }
 
         // adding timestamp information
         const timestamp = document.querySelector('#timestamp');

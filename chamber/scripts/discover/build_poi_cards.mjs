@@ -18,6 +18,7 @@ export function createCard(info, section){
     const poiPic = document.createElement('img');
     poiPic.setAttribute('src',`images/discover/${info.imageName}`);
     poiPic.setAttribute('alt',`Picture of ${info.name}`);
+    poiPic.setAttribute('loading','lazy');
 
     const caption = document.createElement('figcaption');
     caption.textContent = info.name;

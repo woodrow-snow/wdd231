@@ -1,0 +1,156 @@
+/*************************** Point of Interest cards ***************************/
+#allcards {
+    /* box model */
+    margin: 1rem auto;
+}
+
+.poi-card {
+    /* text */
+    text-align: center;
+
+    /* colors */
+    background-color: var(--accent2);
+
+    /* box model */
+    border-radius: 1rem;
+    padding: 0.5rem;
+    margin: 1rem auto;
+
+    /* grid */
+    display: grid;
+    gap: 1rem;
+    grid-template-areas: 
+    "name"
+    "figure"
+    "address"
+    "descript"
+    "button";
+}
+
+.poi-card h2,button {
+    /* font */
+    font-family: var(--head);
+}
+
+.poi-card p, figcaption,address {
+    /* font */
+    font-family: var(--body);
+    font-weight: 600;
+}
+
+.poi-card h2 {
+    grid-area: name;
+}
+
+.poi-card figure {
+    /* display */
+    display: block;
+    grid-area: figure;
+    
+    /* box model */
+    margin: 0 auto;
+}
+
+.poi-card address {
+    /* gird */
+    grid-area: address;
+
+    /* box model */
+    padding-top: 1rem;
+}
+
+.poi-card p {
+    /* grid */
+    grid-area: descript;
+}
+
+.poi-card button {
+    /* colors */
+    background-color: var(--secondary);
+
+    /* box model */
+    border: 2px solid var(--primary);
+    border-radius: 1rem;
+    padding: 0.5rem;
+
+    /* font */
+    font-size: x-large;
+
+    /* grid */
+    grid-area: button;
+}
+
+/*************************** Welcome Sign ***************************/
+#welcome-sign {
+    /* font */
+    font-family: var(--body);
+    font-weight: 600;
+    font-size: larger;
+
+    /* text */
+    text-align: center;
+
+    /* box model */
+    display: block;
+    margin: 0 1.5rem;
+    border-radius: 1rem;
+    padding: 0.5rem;
+
+    /* color */
+    background-color: var(--secondary);
+}
+
+/*************************** Image hover effect ***************************/
+.poi-card figure img:hover {
+    box-shadow: 0 0 50px var(--primary);
+}
+
+/* display for meduim screens */
+@media only screen and (min-width:641px){
+    .poi-card {
+        /* grid */
+        grid-template-areas: 
+        "figure name"
+        "figure address"
+        "figure descript"
+        "figure button";
+        align-items: center;
+
+        /* box model */
+        margin: 1rem;
+        padding: 1rem;
+    }
+
+    .poi-card figure figcaption {
+        width: 300px;
+    }
+
+    .poi-card h2, .poi-card address, .poi-card p {
+        padding: 0;
+        margin: 0;
+    }
+
+    #welcome-sign {
+        margin: 0 5rem;
+    }
+}
+
+@media only screen and (min-width:1025px){
+    #allcards {
+        /* grid */
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+
+        /* box model */
+        margin: 1rem;
+    }
+
+    .poi-card {
+        margin: 0;
+    }
+
+    #welcome-sign {
+        margin: 0 20rem;
+    }
+}

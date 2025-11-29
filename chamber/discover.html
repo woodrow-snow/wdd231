@@ -3,27 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Directory</title>
+    <title>Discover</title>
     <meta name="author" content="Woodrow J. Snow">
-    <meta name="description" content="Here you will find information about local businesses in our area">
+    <meta name="description" content="Discover businesses in your town!">
 
     <!-- css links -->
     <link rel="stylesheet" href="../styles/normalize.css">
     <link rel="stylesheet" href="styles/directory.css">
+    <link rel="stylesheet" href="styles/discover.css">
     
     <!-- favicon link -->
     <link rel="icon" href="dinocon.ico">
 
     <!-- facebook meta tags -->
     <meta property="og:title" content="Directory | WDD 231">
-    <meta property="og:description" content="Here you will find information about local businesses in our area">
+    <meta property="og:description" content="Discover businesses in your town!">
     <meta property="og:image" content="https://woodrow-snow.github.io/wdd231/chamber/imgaes/vernal.webp">
-    <meta property="og:url" content="https://woodrow-snow.github.io/wdd231/chamber/directory.html">
+    <meta property="og:url" content="https://woodrow-snow.github.io/wdd231/chamber/discover.html">
 
     <!-- script links -->
     <script src="../scripts/getdates.js" defer></script>
     <script src="scripts/navigation.js" defer></script>
-    <script src="scripts/get_members.js" defer></script>
+    <script type="module" src="scripts/discover/main.mjs"></script>
 
     <!-- font links -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -40,8 +41,8 @@
         <nav id="nav-bar" class="navigation">
             <ul>
                 <li><a href="index.html">Home</a></li>
-                <li><a href="discover.html">Discover</a></li>
-                <li class="current"><a href="#" class="current">Directory</a></li>
+                <li><a href="discover.html" class="current">Discover</a></li>
+                <li><a href="#">Directory</a></li>
                 <li><a href="join.html">Join</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="podcast.html">Podcast</a></li>
@@ -50,12 +51,9 @@
         </nav>
     </div>
     <main>
-        <h1>Member Directory</h1>
-        <div class="buttons">
-            <button id="grid">Grid</button>
-            <button id="list">List</button>
-        </div>
-        <div id="member-cards" class="card-grid"></div>
+        <h1>Discover</h1>
+        <span id="welcome-sign"></span>
+        <div id="allcards"></div>
     </main>
     <footer>
         <div class="footer-location">

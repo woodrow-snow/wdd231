@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <meta name="author" content="Woodrow J. Snow">
+    <meta name="description" content="The home and pick a game page for Woodrows Game Picker">
+
+    <!-- font links -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <header>
+        <img src="images/logo.svg" alt="site logo depicting 2 dice">
+        <span>Woodrow's Game Picker</span>
+        <button id="ham-btn" class="hamburger" aria-label="Navigation Menu Button"></button>
+    </header>
+    <nav id="nav-bar" class="navigation">
+        <ul>
+            <li><a href="index.html" class="current">Home</a></li>
+            <li><a href="board.html">Board Games</a></li>
+            <li><a href="card.html">Card Games</a></li>
+        </ul>
+    </nav>
+    <main>
+        <h1>Home</h1>
+        <p>Welcome to Woodrows Game Picker! The purpose of this site is to allow you enter in a few details and then get a game to play! Easy and simple! You can add board and card games in their respective pages that we will use to choose from. Don't worry, we have a few suggestions to get you started. On the data page, you can save an information you have entered. You can also upload data you have saved in the past if anything is missing! To get started fillout the form below and roll the dice!</p>
+        <div>
+            <h2>Pick a Game!</h2>
+            <form>
+                <label for="playerCount">People Playing (min of 1):<input type="number" id="playerCount" name="playerCount" min="1"></label>
+                <fieldset>
+                    <legend>Game Type</legend>
+                    <label for="all"><input type="radio" id="all" name="gameType" value="all">All Games</label>
+                    <label for="board"><input type="radio" id="board" name="gameType" value="board">Board Games</label>
+                    <label for="card"><input type="radio" id="card" name="gameType" value="card">Card Games</label>
+                </fieldset>
+                <input type="submit" value="Roll the Dice!" id="roll">
+            </form>
+            <section id="pickedGame"></section>
+        </div>
+    </main>
+</body>
+</html>

@@ -1,0 +1,224 @@
+:root {
+    /* Colors */
+    --primary: #02182b;
+    --secondary: #70798C;
+    --accent1: #EADEDA;
+
+    /* fonts */
+    --head: "Space Grotesk", "Century Gothic", Trebuchet, Verdana;
+    --body: "Ubuntu", "Segoe UI", sans-serif;    
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*************************** Header ***************************/
+header {
+    /* grid */
+    display: grid;
+    grid-template-columns: 40px auto 44px;
+    gap: 0.5rem;
+    align-items: center;
+
+    /* color */
+    background-color: var(--primary);
+    color: var(--accent1);
+
+    /* box model */
+    padding: 5px 0 5px 10px;
+}
+
+header img {
+    width: 100%;
+    height: auto;
+    padding-bottom: -2px;
+}
+
+header span {
+    /* font */
+    font-size: 1.6rem;
+    font-family: var(--head);
+    font-weight: 600;
+
+    /* text */
+    text-align: center;
+}
+
+/*************************** hamburger ***************************/
+.hamburger {
+    /* color */
+    background-color: var(--primary);
+
+    /* box model */
+    border: none;
+
+    /* cursor */
+    cursor: pointer;
+
+    /* font */
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.hamburger::before {
+    content: "\2630";
+    font-size: 2rem;
+    color: var(--accent1);
+}
+
+.hamburger.show::before{
+    content: "\00D7";
+}
+
+/*************************** Navigation ***************************/
+.navigation {
+    display: none;
+}
+
+.navigation.show{
+    display: block;
+}
+
+.navigation ul {
+    list-style-type: none;
+
+    /* flex */
+    display: flex;
+    flex-direction: column;
+}
+
+.navigation li {
+    /* colors */
+    background-color: var(--secondary);
+
+    /* text */
+    text-align: center;
+    
+    /* box model */
+    padding: 0.5rem;
+    border-bottom: solid 2px var(--primary);
+}
+
+.navigation a {
+    /* text */
+    text-decoration: none;
+
+    /* colors */
+    color: var(--accent1);
+
+    /* font */
+    font-family: var(--body);
+    font-size: 1.4rem;
+}
+
+.navigation a.current {
+    text-decoration: underline;
+}
+
+.navigation li:hover {
+    background-color: var(--primary);
+}
+
+/*************************** Main ***************************/
+h1 {
+    /* text */
+    text-align: center;
+
+    /* font */
+    font-family: var(--head);
+
+    /* box model */
+    margin: 0.5rem;
+}
+
+p {
+    /* text */
+    text-align: center;
+
+    /* font */
+    font-family: var(--body);
+
+    /* box model */
+    margin: 1rem;
+}
+
+body {
+    background-color: var(--accent1);
+}
+
+/*************************** Form ***************************/
+h2 {
+    /* text */
+    text-align: center;
+    
+    /* font */
+    font-family: var(--body);
+
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+
+    /* box model */
+    margin: 1rem;
+
+    /* font */
+    font-family: var(--body);
+}
+
+form input#playerCount {
+    width: 100%;
+    height: 26px;
+
+    /* box model */
+    margin-top: 4px;
+}
+
+form label[for='playerCount'] {
+    /* box model */
+    margin-bottom: 1rem;
+
+    /* font */
+    font-size: 1.3rem;
+}
+
+form fieldset {
+    /* flex */
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    
+    /* box model */
+    padding: 1rem;
+
+    /* font */
+    font-size: 1.5rem;
+}
+
+form fieldset label {
+    /* font */
+    font-size: 1.3rem;
+
+    /* box model */
+    padding: 20px auto;
+}
+
+form input[type='submit'] {
+    /* box model */
+    margin: 1rem auto;
+    padding: 0.5rem;
+    border: none;
+    border-radius: 5px;
+
+    /* font */
+    font-size: 1.3rem;
+    font-family: var(--head);
+
+    /* colors */
+    background-color: var(--primary);
+    color: var(--accent1);
+
+}

@@ -1,0 +1,84 @@
+{
+    "baseCardGames":[
+        {
+            "id": "1",
+            "name": "Gin Rummy",
+            "p_min": "2",
+            "p_max": "10",
+            "time": "15 min",
+            "age": "8"
+        },
+        {
+            "id": "2",
+            "name": "Solitaire",
+            "p_min": "1",
+            "p_max": "1",
+            "time": "10 Min",
+            "age": "8"
+        },
+        {
+            "id": "3",
+            "name": "Go Fish!",
+            "p_min": "2",
+            "p_max": "6",
+            "time": "20 min",
+            "age": "3"
+        },
+        {
+            "id": "4",
+            "name": "Garbage",
+            "p_min": "2",
+            "p_max": "4",
+            "time": "30 min",
+            "age": "8"
+        },
+        {
+            "id": "5",
+            "name": "Blackjack",
+            "p_min": "2",
+            "p_max": "10",
+            "time": "1 hour",
+            "age": "18"
+        },
+        {
+            "id": "6",
+            "name": "War",
+            "p_min": "2",
+            "p_max": "2",
+            "time": "40 min",
+            "age": "3"
+        },
+        {
+            "id": "7",
+            "name": "BS",
+            "p_min": "2",
+            "p_max": "10",
+            "time": "30 min",
+            "age": "13"
+        },
+        {
+            "id": "8",
+            "name": "Crazy Eights",
+            "p_min": "2",
+            "p_max": "10",
+            "time": "20 min",
+            "age": "4"
+        },
+        {
+            "id": "9",
+            "name": "Palace",
+            "p_min": "2",
+            "p_max": "5",
+            "time": "20 min",
+            "age": "8"
+        },
+        {
+            "id": "10",
+            "name": "Rum",
+            "p_min": "2",
+            "p_max": "10",
+            "time": "45 min",
+            "age": "18"
+        }
+    ] 
+}

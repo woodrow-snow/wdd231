@@ -206,12 +206,18 @@ form fieldset label {
     padding: 20px auto;
 }
 
-form input[type='submit'] {
+form fieldset input[type='radio'] {
+    width: 25px;
+    height: 15px;
+}
+
+#roll {
     /* box model */
     margin: 1rem auto;
     padding: 0.5rem;
     border: none;
     border-radius: 5px;
+    display: block;
 
     /* font */
     font-size: 1.3rem;
@@ -282,5 +288,12 @@ footer p{
 
     .gamePicker #pickedGame{
         grid-column: 2/3;
+    }
+
+    #roll {
+        justify-self: center;
+        align-self: center;
+
+        padding: 1rem;
     }
 }

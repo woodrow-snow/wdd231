@@ -42,7 +42,7 @@
         <p>Welcome to Woodrows Game Picker! The purpose of this site is to allow you enter in a few details and then get a game to play! Easy and simple! You can add board and card games in their respective pages that we will use to choose from. Don't worry, we have a few suggestions to get you started. On the data page, you can save an information you have entered. You can also upload data you have saved in the past if anything is missing! To get started fillout the form below and roll the dice!</p>
         <div class="gamePicker">
             <h2>Pick a Game!</h2>
-            <form method="GET">
+            <form>
                 <label for="playerCount">People Playing (min of 1):<input type="number" id="playerCount" name="playerCount" min="1"></label>
                 <fieldset>
                     <legend>Game Type</legend>
@@ -50,9 +50,10 @@
                     <label for="board"><input type="radio" id="board" name="gameType" value="board">Board Games</label>
                     <label for="card"><input type="radio" id="card" name="gameType" value="card">Card Games</label>
                 </fieldset>
-                <input type="submit" value="Roll the Dice!" id="roll">
+                <!-- <input type="submit" value="Roll the Dice!" > -->             
             </form>
-            <section id="pickedGame"></section>
+            <button id="roll">Roll the Dice!</button>
+            <dialog id="pickedGame"></dialog>
         </div>
     </main>
     <footer>

@@ -49,8 +49,6 @@ export async function getRandomGame(baseURL){
     // getting player amount
     const playerAmount = document.querySelector('#playerCount').value;
 
-    console.log(playerAmount);
-
     // check to make sure it fits player amount
     while(true){
         // getting choosen games min and mix
@@ -101,6 +99,13 @@ function fillBaseGames(games,data) {
 }
 
 function buildDialog(game, dialog){
+
+    // deleting everything before creating
+    const allLoadedElements = document.querySelectorAll('dialog > *');
+
+    allLoadedElements.forEach(e => {
+        e.remove();
+    });
     
     // creating close button
     const closeBtn = document.createElement('button');
@@ -111,14 +116,28 @@ function buildDialog(game, dialog){
         dialog.close();
     });
 
-    // adding close btn to document
-    dialog.appendChild(closeBtn);
+    // creating game information
+    const name = document.createElement('h2');
+    name.textContent = `Your game is: ${game.name}`;
 
-    // creating information
-    dialog.innerHTML = `
-        <h2>Your game is: ${game.name}</h2>
-        <p>Players: ${game.p_min} - ${game.p_max}</p>
-        <p>Average time to play: ${game.time}</p>
-        <p>ages ${game.age}+</p>
-    `;
+    const players = document.createElement('p');
+    players.textContent = `Players: ${game.p_min} - ${game.p_max}`;
+
+    const time = document.createElement('p');
+    time.textContent = `Average time to play: ${game.time}`
+
+    const age = document.createElement('p');
+    age.textContent = `Ages ${game.age}+`
+
+    // creating div for h2 and closebtn and adding elements
+    const dialogBar = document.createElement('div');
+    dialogBar.classList.add('header-bar');
+    dialogBar.appendChild(name);
+    dialogBar.appendChild(closeBtn);
+    
+    // adding elements to dialog
+    dialog.append(dialogBar);
+    dialog.append(players);
+    dialog.append(time);
+    dialog.append(age);
 }

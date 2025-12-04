@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank you!</title>
+    <meta name="author" content="Woodrow J. Snow">
+    <meta name="description" content="The home and pick a game page for Woodrows Game Picker">
+
+    <!-- font links -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+
+    <!-- css links -->
+    <link rel="stylesheet" href="styles/index.css">
+    <link rel="stylesheet" href="styles/board.css">
+
+    <!-- JS links -->
+    <script src="scripts/navigation.js" defer></script>
+    <script src="scripts/getdates.js" defer></script>
+
+    <!-- favicon link -->
+    <link rel="icon" href="picker.ico">
+
+</head>
+<body>
+    <header>
+        <img src="images/logo.svg" alt="site logo depicting 2 dice">
+        <span>Woodrow's Game Picker</span>
+        <button id="ham-btn" class="hamburger" aria-label="Navigation Menu Button"></button>
+    </header>
+    <nav id="nav-bar" class="navigation">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="board.html" class="current">Board Games</a></li>
+            <li><a href="card.html">Card Games</a></li>
+            <li><a href="data.html">Data</a></li>
+        </ul>
+    </nav>
+    <main>
+        <div id="thank-you-message"></div>
+    </main>
+    <footer>
+        <p>&copy;<span id="currentyear"></span> &#9731; Woodrow J. Snow &#9731; Utah, United States of America</p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,129 @@
+/* 
+:root {
+    Colors 
+    --primary: #02182b;
+    --secondary: #70798C;
+    --accent1: #EADEDA;
+
+    fonts
+    --head: "Space Grotesk", "Century Gothic", Trebuchet, Verdana;
+    --body: "Ubuntu", "Segoe UI", sans-serif;    
+}
+*/
+
+/*************************** Table ***************************/
+table {
+    display: none;
+}
+
+.boardHeader{
+    display: none;
+}
+
+.tableHidden {
+    /* font */
+    font-family: var(--head);
+
+    /* box model */
+    padding: 0.5rem;
+    margin: 1rem;
+    border: 1px dashed var(--primary);
+    border-radius: 5px;
+    
+}
+
+/*************************** Form ***************************/
+#addBoard {
+    /* box model */
+    margin: 1rem;
+
+    /* flex */
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+form label {
+    /* flex */
+    display: flex;
+    flex-direction: column;
+
+    /* box model */
+    margin: 0 auto;
+
+    /* font */
+    font-family: var(--body);
+    font-size: 1.3rem;
+}
+
+form label input {
+    max-width: 200px;
+    height: 25px;
+
+    padding: 0.5rem;
+}
+
+input[type='submit']{
+    /* box model */
+    margin: 0 auto;
+    padding: 0.5rem;
+    border: none;
+    border-radius: 5px;
+
+    /* font */
+    font-family: var(--head);
+    font-size: 1.3rem;
+
+    /* colors */
+    background-color: var(--primary);
+    color: var(--accent1);
+}
+
+input:required{
+    border: 1px solid red;
+}
+
+input:required:valid{
+    border: 1px solid green;
+}
+
+/*************************** Bigger Screens ***************************/
+@media only screen and (min-width:600px){
+    /*************************** Table ***************************/
+    .tableHidden {
+        display: none;
+    }
+
+    .boardHeader {
+        display: block;
+    }
+    
+    table {
+    /* font */
+    font-family: var(--body);
+
+    /* box model */
+    display: table;
+    margin: 1rem auto;
+    
+    /* table */
+    border-spacing: 0;
+    }
+
+    th {
+    padding: 0.5rem;
+    border: 1px solid var(--primary);
+    }
+
+    #addBoard{
+        /* gird */
+        display: grid;
+        grid-template-columns: auto auto;
+        gap: 1rem;
+        justify-content: center;
+    }
+
+    input[type='submit'] {
+        grid-column: 1/3;
+    }
+}

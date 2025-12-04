@@ -18,7 +18,6 @@
     <!-- JS links -->
     <script src="scripts/navigation.js" defer></script>
     <script src="scripts/getdates.js" defer></script>
-    <script type="module" src="scripts/index_main.mjs"></script>
 
     <!-- favicon link -->
     <link rel="icon" href="picker.ico">
@@ -35,6 +34,7 @@
             <li><a href="index.html" class="current">Home</a></li>
             <li><a href="board.html">Board Games</a></li>
             <li><a href="card.html">Card Games</a></li>
+            <li><a href="data.html">Data</a></li>
         </ul>
     </nav>
     <main>
@@ -42,7 +42,7 @@
         <p>Welcome to Woodrows Game Picker! The purpose of this site is to allow you enter in a few details and then get a game to play! Easy and simple! You can add board and card games in their respective pages that we will use to choose from. Don't worry, we have a few suggestions to get you started. On the data page, you can save an information you have entered. You can also upload data you have saved in the past if anything is missing! To get started fillout the form below and roll the dice!</p>
         <div class="gamePicker">
             <h2>Pick a Game!</h2>
-            <form>
+            <form id="getGame">
                 <label for="playerCount">People Playing (min of 1):<input type="number" id="playerCount" name="playerCount" min="1"></label>
                 <fieldset>
                     <legend>Game Type</legend>
@@ -53,8 +53,8 @@
                 <!-- <input type="submit" value="Roll the Dice!" > -->             
             </form>
             <button id="roll">Roll the Dice!</button>
-            <dialog id="pickedGame"></dialog>
         </div>
+        <dialog id="pickedGame"></dialog>
     </main>
     <footer>
         <p>&copy;<span id="currentyear"></span> &#9731; Woodrow J. Snow &#9731; Utah, United States of America</p>

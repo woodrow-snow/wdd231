@@ -1,0 +1,14 @@
+h3{
+    /* text */
+    text-align: center;
+
+    /* font */
+    font-family: var(--head);
+
+    /* box model */
+    margin: 0.5rem;
+}
+
+p{
+    margin: 0.5rem;
+}

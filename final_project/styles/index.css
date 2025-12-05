@@ -236,6 +236,9 @@ h2 {
     position: relative;
     z-index: 10;
 }
+#roll:hover {
+    background-color: var(--secondary);
+}
 
 /*************************** Footer ***************************/
 footer {

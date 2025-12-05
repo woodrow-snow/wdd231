@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data</title>
+    <meta name="author" content="Woodrow J. Snow">
+    <meta name="description" content="The home and pick a game page for Woodrows Game Picker">
+
+    <!-- font links -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+
+    <!-- css links -->
+    <link rel="stylesheet" href="styles/index.css">
+    <link rel="stylesheet" href="styles/data.css">
+
+    <!-- JS links -->
+    <script src="scripts/navigation.js" defer></script>
+    <script src="scripts/getdates.js" defer></script>
+    <script type="module" src="scripts/data/data_main.mjs"></script>
+
+    <!-- favicon link -->
+    <link rel="icon" href="picker.ico">
+
+</head>
+<body>
+    <header>
+        <img src="images/logo.svg" alt="site logo depicting 2 dice">
+        <span>Woodrow's Game Picker</span>
+        <button id="ham-btn" class="hamburger" aria-label="Navigation Menu Button"></button>
+    </header>
+    <nav id="nav-bar" class="navigation">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="board.html">Board Games</a></li>
+            <li><a href="card.html">Card Games</a></li>
+            <li><a href="data.html" class="current">Data</a></li>
+        </ul>
+    </nav>
+    <main>
+        <h1>Your Data</h1>
+        <p>Here you can save and upload your data! The methods we use to store it are said to never delete your data on your own, but don't trust us or them. We may shrug our shoulders and say, "Oh you can trust us we are cute little guys," but don't. The internet is a fical mistress. We want you to keep your data and the games you have entered. No one wants to do all that work twice. So please.. save it, back it up, and be ready for anything</p>
+        <h2>Save Data</h2>
+        <div class="downloadLinks">
+            <a id="cardDownload" class="download">Download Card Games</a>
+            <a id="boardDownload" class="download">Download Board Games</a>
+
+        </div>
+        <h2>Upload Data</h2>
+        <div class="uploadForm">
+            <form id="dataUpload">
+                <label for="datafile" id="fileLabel">Please select your data file:<input type="file" name="datafile" id="datafile" accept=".json"></label>
+                <fieldset>
+                    <legend>Please select the type of game the data contains:</legend>
+                    <label for="card"><input type="radio" id="card" name="uploadType" value="card">Card Games</label>
+                    <label for="board"><input type="radio" id="board" name="uploadType" value="board">Board Games</label>
+                </fieldset>
+            </form>
+            <button id="upload">Upload Data</button>
+        </div>
+        <span id="message"></span> 
+    </main>
+    <footer>
+        <p>&copy;<span id="currentyear"></span> &#9731; Woodrow J. Snow &#9731; Utah, United States of America</p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,113 @@
+/*************************** Download links ***************************/
+.downloadLinks {
+    /* flex */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    flex-direction: column;
+    
+    
+    /* box model */
+    margin: 1rem auto;
+}
+
+.download {
+    /* font */
+    font-family: var(--body);
+    font-size: 1.4rem;
+
+    /* text */
+    text-decoration: none;
+
+    /* colors */
+    color: var(--accent1);
+    background-color: var(--primary);
+
+    /* box model */
+    padding: 0.5rem;
+    border-radius: 5px;
+}
+
+/*************************** Body ***************************/
+h2 {
+    font-family: var(--head);
+}
+
+/*************************** Form ***************************/
+.uploadForm {
+    /* box model */
+    margin: 1rem;
+}
+
+#dataUpload {
+    /* flex */
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+#dataUpload label, #dataUpload fieldset legend {
+    /* font */
+    font-family: var(--body);
+    font-size: 1.3rem;
+}
+
+#dataUpload fieldset {
+    /* flex */
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+
+    /* box model */
+    padding: 1rem;
+}
+
+#dataUpload fieldset input {
+    width: 25px;
+    height: 15px;
+}
+
+#upload {
+    /* display */
+    display: block;
+
+    /* box model */
+    margin: 1rem auto;
+    padding: 0.5rem;
+    border-radius: 5px;
+    border: none;
+
+    /* colors */
+    color: var(--accent1);
+    background-color: var(--primary);
+
+    /* font */
+    font-family: var(--body);
+    font-size: 1.3rem;
+}
+
+/*************************** Larger Screens ***************************/
+@media only screen and (min-width:600px){
+    .downloadLinks {
+        flex-direction: row;
+    }
+
+    #dataUpload {
+        display: grid;
+        grid-template-columns: max-content max-content;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    #dataUpload fieldset legend {
+        max-width: 350px;
+    }
+
+    #fileLabel {
+        display: flex;
+        flex-direction: column;
+    }
+
+}

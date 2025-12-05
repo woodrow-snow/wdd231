@@ -140,7 +140,7 @@ function chooseGame(games,index){
     return games[chosenNum]; 
 }
 
-function getGameType(types){
+export function getGameType(types){
     let gt;  // gt = game type
     for (const t of types) {
             if (t.checked) {

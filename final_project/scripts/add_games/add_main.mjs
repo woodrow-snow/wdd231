@@ -2,25 +2,42 @@
 // import statements
 import { getFromLocalStorage, setInLocalStorage } from "../functions.mjs";
 
-// getting elements from docuemnt
-const thankYou = document.querySelector('#thank-you-message');
-
-
+// updating html on thankyou page for better nav identification
+// getting nav from page
+const cardNav = document.querySelector('.card');
+const boardNav = document.querySelector('.board');
 
 // getting info from browser 
 const data = new URLSearchParams(window.location.search);
 
+if (boardNav.classList.contains('current') && data.get('gameType') == 'card'){
+    boardNav.classList.remove('current');
+    cardNav.classList.add('current');
+}
+
+// getting elements from docuemnt
+const thankYou = document.querySelector('#thank-you-message');
+
 // Global Vars
-const BOARD_LS_NAME = `${data.get('gameType')}Games`;
+const TYPE_LS_NAME = `${data.get('gameType')}Games`;
 
 // info from localStorage
-let boardGames; 
-try {
-    boardGames = getFromLocalStorage(BOARD_LS_NAME);
+let allGames = getFromLocalStorage(TYPE_LS_NAME);
+// try {
+//     console.log('in try');
+//     allGames = getFromLocalStorage(TYPE_LS_NAME);
+//     console.log(allGames);
+// }
+// catch {
+//     console.log('in catch')
+//     allGames = [];
+// }
+
+if (allGames == null) {
+    allGames = [];
 }
-catch {
-    boardGames = [];
-}
+
+console.log(allGames);
 
 // creating message
 thankYou.innerHTML = `
@@ -45,18 +62,18 @@ const newGame = {
 // setting the id for the new game
 let newGameID = -1;
 
-console.log(boardGames);
-if (boardGames.length == 0){
+console.log(allGames);
+if (allGames.length == 0){
     newGameID = 1;
 }
 else {
-    newGameID = boardGames.length + 1;
+    newGameID = allGames.length + 1;
 }
 
 newGame.id = newGameID;
 
 // adding new game to array
-boardGames.push(newGame);
+allGames.push(newGame);
 
 // saving data to localStorage
-setInLocalStorage(BOARD_LS_NAME,boardGames);
+setInLocalStorage(TYPE_LS_NAME,allGames);

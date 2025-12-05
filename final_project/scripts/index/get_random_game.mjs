@@ -2,21 +2,39 @@
 // import statements
 import { generateNumber } from "./randon_num.mjs";
 import { getData } from '../get_data.mjs';
+import { getFromLocalStorage } from "../functions.mjs";
+import { handleNoBoard } from "./no_board.mjs";
+import { deleteMsgs } from "./delete_error_msg.mjs";
 
 // global vars
 const DEFAULT_GAMES_COUNT = 10;
+const CARD = 'cardGames';
+const BOARD = 'boardGames';
 
 export async function getRandomGame(baseURL){
     // check what game type
     // selecting all radio buttons from DOM
     const gameTypes = document.getElementsByName('gameType');
+
+    // deleteing error messages if any
+    deleteMsgs();
         
     // finding which button was checked
     const type = getGameType(gameTypes);
     console.log(type); // testing
 
     // getting information form users localStorage
-    // ----- need to add code -----
+    let cardGames = getFromLocalStorage(CARD);
+    let boardGames = getFromLocalStorage(BOARD);
+
+    // making sure there is an empty array if they return null
+    if (cardGames == null) {
+        cardGames = [];
+    }
+
+    if (boardGames == null) {
+        boardGames = [];
+    }
 
     // getting highest index number based on game type and creating array of all needed games
     const allGames = [];
@@ -25,20 +43,65 @@ export async function getRandomGame(baseURL){
     // creating array for all games to go in then filling in if statement
 
     if (type == 'all'){
+        // getting highestIndex
         highestIndex += DEFAULT_GAMES_COUNT;
-        // ----- need to add code -----
+        
+        if (cardGames.length != 0) {
+            highestIndex += cardGames.length;
+        }
+        
+        if (boardGames.length != 0) {
+            highestIndex += boardGames.length;
+        }
+        else if (boardGames.length == 0) {
+            // hanlding no boardGames
+            handleNoBoard();
+        }
 
+        // creating array with all games
+        // adding base card games
         const gameData = await getData(baseURL);
         fillBaseGames(allGames,gameData)
+        
+        //adding board games
+        boardGames.forEach(b => {
+            allGames.push(b);
+        }); 
+        
+        //adding card games
+        cardGames.forEach(c => {
+            allGames.push(c);
+        }); 
     }
     else if (type == 'board') {
-        // ----- need to add code -----
+        if (boardGames.length != 0) {
+            highestIndex += boardGames.length;
+
+            //adding board games
+            boardGames.forEach(b => {
+                allGames.push(b);
+            });
+        }
+        else {
+            // handle the event where there are no board games
+            handleNoBoard();
+        }
     }
     else if (type == 'card'){
+        // getting highest index
         highestIndex += DEFAULT_GAMES_COUNT;
-        // ----- need to add code -----
+
+        if (cardGames.length != 0) {
+            highestIndex += cardGames.length;
+        }
+
         const gameData = await getData(baseURL);
-        fillBaseGames(allGames,gameData)
+        fillBaseGames(allGames,gameData);
+
+        //adding card games
+        cardGames.forEach(c => {
+            allGames.push(c);
+        }); 
     }
     // removing one from highestIndex to make 0 based
     highestIndex -= 1;

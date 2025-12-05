@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Board Games</title>
+    <title>Card Games</title>
     <meta name="author" content="Woodrow J. Snow">
     <meta name="description" content="The home and pick a game page for Woodrows Game Picker">
 
@@ -19,7 +19,7 @@
     <!-- JS links -->
     <script src="scripts/navigation.js" defer></script>
     <script src="scripts/getdates.js" defer></script>
-    <script type="module" src="scripts/board/board_main.mjs"></script>
+    <script type="module" src="scripts/card/card_main.mjs"></script>
 
     <!-- favicon link -->
     <link rel="icon" href="picker.ico">
@@ -34,14 +34,14 @@
     <nav id="nav-bar" class="navigation">
         <ul>
             <li><a href="index.html">Home</a></li>
-            <li><a href="board.html" class="current">Board Games</a></li>
-            <li><a href="card.html">Card Games</a></li>
+            <li><a href="board.html">Board Games</a></li>
+            <li><a href="card.html" class="current">Card Games</a></li>
             <li><a href="data.html">Data</a></li>
         </ul>
     </nav>
     <main>
-        <h1>Board Games</h1>
-        <h2 class="boardHeader">Entered Board Games</h2>
+        <h1>Card Games</h1>
+        <h2 class="boardHeader">Entered Card Games</h2>
         <h2 class="tableHidden">Your screen is too small right now to view the games you have added, turn your screen to go to a bigger device to view them all</h2>
         <table>
             <tr>
@@ -54,9 +54,9 @@
             </tr>
             <!-- other rows will be added via JavaScript -->
         </table>
-        <h2>Add a Board Game</h2>
+        <h2>Add a Card Game</h2>
         <form method="GET" id="addBoard" action="thankyou.html">
-            <label for="name">Games Name:<input type="text" id="name" name="name" required placeholder="Sorry!"></label>
+            <label for="name">Games Name:<input type="text" id="name" name="name" required placeholder="UNO"></label>
             <label for="length">Games Length:<input type="text" id="length" name="length" required placeholder="30 min"></label>
             <label for="pMin">Min Players:<input type="number" id="pMin" name="pMin" required placeholder="1"></label>
             <label for="pMax">Max Players:<input type="number" id="pMax" name="pMax" required placeholder="10"></label>

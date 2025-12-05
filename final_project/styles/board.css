@@ -99,20 +99,47 @@ input:required:valid{
     }
     
     table {
-    /* font */
-    font-family: var(--body);
+        /* font */
+        font-family: var(--body);
 
-    /* box model */
-    display: table;
-    margin: 1rem auto;
-    
-    /* table */
-    border-spacing: 0;
+        /* box model */
+        display: table;
+        margin: 1rem auto;
+        
+        /* table */
+        border-spacing: 0;
     }
 
     th {
-    padding: 0.5rem;
-    border: 1px solid var(--primary);
+        /* box model */
+        padding: 0.5rem;
+        border: 1px solid var(--secondary);
+        
+        /* colors */
+        background-color: var(--primary);
+        color: var(--accent1);
+    }
+
+    td {
+        /* box models */
+        border: 1px solid var(--primary);
+        padding: 0.5rem;
+
+        /* text */
+        text-align: center;
+
+        /* font */
+        font-family: var(--body);
+    }
+
+    tr {
+        background-color: var(--secondary);
+        color: var(--accent1);
+    }
+
+    tr:nth-child(odd) {
+        background-color: #70798c85;
+        color: var(--primary);
     }
 
     #addBoard{

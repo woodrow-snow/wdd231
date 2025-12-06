@@ -258,6 +258,21 @@ footer p{
     margin: 0;
 }
 
+footer a {
+    font-family: var(--body);
+    font-size: 1.1rem;
+    margin: 0 auto;
+    display: block;
+    text-decoration: none;
+    color: var(--accent1);
+    text-align: center;
+}
+
+footer a:hover {
+    color: var(--secondary);
+    text-decoration: underline;
+}
+
 /*************************** Modal ***************************/
 #pickedGame {
     /* box model */

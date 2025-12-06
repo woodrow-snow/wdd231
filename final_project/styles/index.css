@@ -106,7 +106,7 @@ header span {
     text-decoration: none;
 
     /* colors */
-    color: var(--accent1);
+    color: black;
 
     /* font */
     font-family: var(--body);

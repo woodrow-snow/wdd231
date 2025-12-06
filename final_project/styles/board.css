@@ -140,7 +140,7 @@ input:required:valid{
 
     tr {
         background-color: var(--secondary);
-        color: var(--accent1);
+        color: black;
     }
 
     tr:nth-child(odd) {

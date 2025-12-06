@@ -179,6 +179,8 @@ h2 {
 
     /* box model */
     margin-top: 4px;
+    border-radius: 5px;
+    border: solid 1px black;
 }
 
 #getGame label[for='playerCount'] {
@@ -197,6 +199,7 @@ h2 {
     
     /* box model */
     padding: 1rem;
+    border-radius: 5px;
 
     /* font */
     font-size: 1.5rem;

@@ -79,6 +79,12 @@ input[type='submit'] {
     color: var(--accent1);
 }
 
+input[type='text'],
+input[type='number'] {
+    border-radius: 5px;
+}
+
+
 input:required{
     border: 1px solid red;
 }

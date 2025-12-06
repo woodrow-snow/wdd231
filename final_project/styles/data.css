@@ -61,6 +61,7 @@ h2 {
 
     /* box model */
     padding: 1rem;
+    border-radius: 5px;
 }
 
 #dataUpload fieldset input {

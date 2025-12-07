@@ -1,0 +1,17 @@
+Here are some notes for my future plans for this project
+
+[ ] - Add confirmation for uploading data
+[ ] - For base games, add that they use playing cards
+        - do in the games name ex: War (playing cards)
+[ ] - add sorting for co-op and competitive games
+[ ] - add option to disable use of base games in picker on home
+[ ] - Add requried parameter to player count
+        - if that doesn't work, find another way
+[ ] - Add an FAQ page, have in footer and have link on index page
+        - have videos for how to do some things
+[ ] - Add penguin dancing across the screen that says "Roes penguin" (easter egg)
+[ ] - Create a download both button on data.html
+[ ] - Add link on home page to show base games
+[ ] - Add link to game instructions for base games
+[ ] - Add string formatting for the time adding in board and card game sections
+[ ] - add link in footer to improvments plan on Github

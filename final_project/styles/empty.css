@@ -33,6 +33,33 @@
     color: var(--primary);
 }
 
+/*************************** for base games page (cause why not) ***************************/
+.goBack {
+    /* text */
+    text-decoration: none;
+    text-align: center;
+
+    /* box model */
+    display: block;
+    margin: 0 auto 1rem auto;
+    padding: 0.5rem;
+    border-radius: 5px;
+    max-width: 100px;
+
+    /* colors */
+    background-color: var(--primary);
+    color: var(--accent1);
+
+    /* font */
+    font-family: var(--body);
+    font-size: 1.3rem;
+}
+
+.goBack:hover {
+    background-color: var(--secondary);
+    color: var(--primary);
+}
+
 @media only screen and (min-width:600px){
     .base-games a {
         margin: 0 auto;

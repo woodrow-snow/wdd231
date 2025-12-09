@@ -116,9 +116,11 @@ header span {
     text-decoration: underline;
 }
 
-.navigation li:hover {
+.navigation li:hover,  .navigation li:hover a{
     background-color: var(--primary);
+    color: var(--accent1);
 }
+
 
 /*************************** Main ***************************/
 h1 {

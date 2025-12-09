@@ -21,7 +21,6 @@ export async function getRandomGame(baseURL){
         
     // finding which button was checked
     const type = getGameType(gameTypes);
-    console.log(type); // testing
 
     // getting information form users localStorage
     let cardGames = getFromLocalStorage(CARD);
@@ -152,7 +151,7 @@ export function getGameType(types){
     return gt;
 }
 
-function fillBaseGames(games,data) {
+export function fillBaseGames(games,data) {
     // the reason this function works is because
     const trueData = data.baseCardGames;
 

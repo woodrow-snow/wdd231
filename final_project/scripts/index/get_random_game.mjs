@@ -191,6 +191,19 @@ function buildDialog(game, dialog){
     const age = document.createElement('p');
     age.textContent = `Ages ${game.age}+`
 
+    // getting if chosen game is a base game, if it is adding game instrucitons link
+    const gameName = game.name;
+    let isBaseGame = false;
+    let link;
+
+    if (gameName.includes('(Playing Cards)')) {
+        link = document.createElement('a');
+        link.href = game.link;
+        link.textContent = `Learn how to play ${gameName} here!`
+        
+        isBaseGame = true;
+    }
+
     // creating div for h2 and closebtn and adding elements
     const dialogBar = document.createElement('div');
     dialogBar.classList.add('header-bar');
@@ -202,4 +215,8 @@ function buildDialog(game, dialog){
     dialog.append(players);
     dialog.append(time);
     dialog.append(age);
+
+    if (isBaseGame) {
+        dialog.append(link);
+    }
 }

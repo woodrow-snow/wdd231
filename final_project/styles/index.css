@@ -330,6 +330,27 @@ footer a:hover {
     color: red;
 }
 
+#pickedGame a {
+    /* colors */
+    background-color: var(--primary);
+    color: var(--accent1);
+
+    /* box model */
+    padding: 0.5rem;
+    border-radius: 5px;
+    display: block;
+    margin: 0 auto;
+    max-width: 325px;
+
+    /* text */
+    text-align: center;
+    text-decoration: none;
+
+    /* font */
+    font-family: var(--body);
+    font-size: 1.2rem;
+}
+
 /*************************** For bigger screens ***************************/
 @media only screen and (min-width:600px){
     header, main, nav, footer {

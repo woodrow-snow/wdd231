@@ -1,0 +1,41 @@
+/* This is just to fulfill the requires of 2 css sheets for the index page.
+ addding the base games css rules in here
+*/
+
+/*************************** Base Games ***************************/
+.base-games {
+    /* box model */
+    margin: 1rem;
+    padding: 0.5rem;
+}
+
+.base-games a {
+    /* text */
+    text-align: center;
+    text-decoration: none;
+
+    /* box model */
+    display: block;
+    padding: 0.5rem;
+    border-radius: 5px;
+
+    /* colors */
+    color: var(--accent1);
+    background-color: var(--primary);
+
+    /* font */
+    font-family: var(--body);
+    font-size: 1.2rem;
+}
+
+.base-games a:hover {
+    background-color: var(--secondary);
+    color: var(--primary);
+}
+
+@media only screen and (min-width:600px){
+    .base-games a {
+        margin: 0 auto;
+        max-width: 300px;
+    }
+}

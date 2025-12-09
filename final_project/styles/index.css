@@ -239,6 +239,7 @@ h2 {
 }
 #roll:hover {
     background-color: var(--secondary);
+    color: var(--primary);
 }
 
 /*************************** Footer ***************************/

@@ -29,6 +29,11 @@
     border-radius: 5px;
 }
 
+.download:hover {
+    background-color: var(--secondary);
+    color: var(--primary);
+}
+
 /*************************** Body ***************************/
 h2 {
     font-family: var(--head);
@@ -86,6 +91,30 @@ h2 {
     /* font */
     font-family: var(--body);
     font-size: 1.3rem;
+}
+
+#upload:hover {
+    background-color: var(--secondary);
+    color: var(--primary);
+}
+
+/*************************** Upload success message ***************************/
+#message {
+    /* text */
+    text-align: center;
+    
+    /* box model */
+    display: block;
+    margin-bottom: 1rem;
+    padding: 1rem;
+
+    /* font */
+    font-family: var(--head);
+    font-size: 1.2rem;
+    font-weight: 600;
+
+    /* color */
+    color: #3b644b;
 }
 
 /*************************** Larger Screens ***************************/

@@ -5,6 +5,7 @@ import { makeUnclickable } from "./make_unclickable.mjs";
 import { setInLocalStorage } from "../functions.mjs";
 import { getGameType } from "../index/get_random_game.mjs";
 import { getDataFromFile } from "./get_from_file.mjs";
+import { addSuccessMessage } from "./add_success.mjs";
 
 // ---------- handling downloading of data ----------
 const cardLink = document.querySelector('#cardDownload');
@@ -54,6 +55,12 @@ uploadBtn.addEventListener('click', () => {
 
     const uploadType = getGameType(types);
 
+    // making button unclickable again
+    makeUnclickable(uploadBtn);
+
     // saving data
     setInLocalStorage(`${uploadType}Games`,uploadedData);
+
+    // adding success message
+    addSuccessMessage(uploadType);
 });

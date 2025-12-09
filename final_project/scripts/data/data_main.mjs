@@ -55,9 +55,6 @@ uploadBtn.addEventListener('click', () => {
 
     const uploadType = getGameType(types);
 
-    // making button unclickable again
-    makeUnclickable(uploadBtn);
-
     // saving data
     setInLocalStorage(`${uploadType}Games`,uploadedData);
 

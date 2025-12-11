@@ -66,6 +66,11 @@
             <label for="pMin">Min Players:<input type="number" id="pMin" name="pMin" required placeholder="1"></label>
             <label for="pMax">Max Players:<input type="number" id="pMax" name="pMax" required placeholder="10"></label>
             <label for="age">Youngest Age:<input type="number" min="2" id="age" name="age" placeholder="8" required></label>
+            <fieldset class="coopTypeField">
+                <legend>Co-op Type: </legend>
+                <label for="coop"><input type="radio" id="coop" name="coopType" value="coop">Co-op</label>
+                <label><input type="radio" id="comp" name="coopType" value="comp">Competitive</label>
+            </fieldset>
             <input type="hidden" id="board" name="gameType" value="board">
             <input type="submit" value="Add Board Game">
         </form>

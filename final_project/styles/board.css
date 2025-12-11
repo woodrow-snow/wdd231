@@ -93,6 +93,43 @@ input:required:valid{
     border: 1px solid green;
 }
 
+.coopTypeField {
+    /* box model */
+    border-radius: 5px;
+    padding: 0.5rem 0;
+    max-width: 200px;
+    width: 100%;
+
+    /* display */
+    align-self: center;
+}
+
+.coopTypeField legend {
+    /* font */
+    font-family: var(--body);
+    font-size: 1.3rem;
+
+    /* box model */
+    padding: 0 0.5rem;
+    margin-right: 0;
+}
+
+.coopTypeField label {
+    /* flex */
+    flex-direction: row;
+    gap: 0.5rem;
+
+    /* box model */
+    padding: 0.25rem;
+}
+
+.coopTypeField label input[type='radio']{
+    /* box model*/
+    margin-left: 0.5rem;
+    width: 20px;
+    
+}
+
 /*************************** Bigger Screens ***************************/
 @media only screen and (min-width:600px){
     /*************************** Table ***************************/

@@ -22,6 +22,10 @@ export async function getRandomGame(baseURL){
     // finding which button was checked
     const type = getGameType(gameTypes);
 
+    // getting the cooperation type
+    const coopTypes = document.getElementsByName('coopType');
+    const coopType = getGameType(coopTypes);
+
     // getting information form users localStorage
     let cardGames = getFromLocalStorage(CARD);
     let boardGames = getFromLocalStorage(BOARD);
@@ -40,7 +44,6 @@ export async function getRandomGame(baseURL){
     let highestIndex = 0;
 
     // creating array for all games to go in then filling in if statement
-
     if (type == 'all'){
         // getting highestIndex
         highestIndex += DEFAULT_GAMES_COUNT;
@@ -102,6 +105,7 @@ export async function getRandomGame(baseURL){
             allGames.push(c);
         }); 
     }
+
     // removing one from highestIndex to make 0 based
     highestIndex -= 1;
 
@@ -111,17 +115,50 @@ export async function getRandomGame(baseURL){
     // getting player amount
     const playerAmount = document.querySelector('#playerCount').value;
 
-    // check to make sure it fits player amount
+    // check to make sure it fits player amount and cooperation type
     while(true){
+        let validPlayerCount = false;
+        let vaildCoopType = false;
+
         // getting choosen games min and mix
         let player_max = chosenGame.p_max;
         let player_min = chosenGame.p_min;
 
+        // might have to revist how to do this
         if (playerAmount < player_min || playerAmount > player_max ){
-            chosenGame = chooseGame(allGames,highestIndex);
+            validPlayerCount = false;
         }
         else {
+            validPlayerCount = true;
+        }
+        
+        // checking if co-opType exsists
+        let cooperationType;
+
+        if (!('co-opType' in chosenGame)) {
+            cooperationType = 'allCoop';
+        }
+        else {
+            cooperationType = chosenGame['co-opType']; 
+        }
+
+        // checking co-op type
+        if (coopType == 'allCoop') {
+            vaildCoopType = true;
+        }
+        else if (coopType == cooperationType) {
+            vaildCoopType = true;
+        }
+        else {
+            vaildCoopType = false;
+        }
+
+        // if both are true you can return, else get a new game
+        if (vaildCoopType && validPlayerCount) {
             break;
+        }
+        else {
+            chosenGame = chooseGame(allGames,highestIndex);
         }
     }
 

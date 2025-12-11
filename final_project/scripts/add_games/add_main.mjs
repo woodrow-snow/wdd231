@@ -23,21 +23,22 @@ const TYPE_LS_NAME = `${data.get('gameType')}Games`;
 
 // info from localStorage
 let allGames = getFromLocalStorage(TYPE_LS_NAME);
-// try {
-//     console.log('in try');
-//     allGames = getFromLocalStorage(TYPE_LS_NAME);
-//     console.log(allGames);
-// }
-// catch {
-//     console.log('in catch')
-//     allGames = [];
-// }
 
 if (allGames == null) {
     allGames = [];
 }
 
 console.log(allGames);
+
+// getting cooperation type
+let gameCoopType = data.get('coopType');
+
+if (gameCoopType == 'coop') {
+    gameCoopType = 'Co-op';
+}
+else if (gameCoopType == 'comp') {
+    gameCoopType = "Competitive";
+}
 
 // creating message
 thankYou.innerHTML = `
@@ -46,6 +47,7 @@ thankYou.innerHTML = `
     <h3>Name: ${data.get('name')}</h3>
     <p>Number of Players: ${data.get('pMin')} to ${data.get('pMax')}</p>
     <p>Recommended Age: ${data.get('age')}+</p>
+    <p>Cooperation Type: ${gameCoopType}</p>
 `;
 
 // adding data to localStorage
@@ -56,7 +58,8 @@ const newGame = {
     p_min:data.get('pMin'),
     p_max:data.get('pMax'),
     time:data.get('length'),
-    age:data.get('age')
+    age:data.get('age'),
+    'co-opType':gameCoopType
 }
 
 // setting the id for the new game

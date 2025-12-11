@@ -26,6 +26,14 @@ export function buildBTableRows(games){
         const age = document.createElement('td');
         age.textContent = game.age;
 
+        const coopType = document.createElement('td');
+        // checking to see if blank, if it is set null in textContent
+        if (game['co-opType'] == '' || !('co-opType' in game)){
+            coopType.innerHTML = '<i>NULL</i>';
+        } else {
+            coopType.textContent = game['co-opType'];
+        }
+        
         // adding td elements to table row
         tableRow.appendChild(id);
         tableRow.appendChild(name);
@@ -33,6 +41,7 @@ export function buildBTableRows(games){
         tableRow.appendChild(pMax);
         tableRow.appendChild(time);
         tableRow.appendChild(age);
+        tableRow.appendChild(coopType);
 
         // adding tr to table
         table.append(tableRow);

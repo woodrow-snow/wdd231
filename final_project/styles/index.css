@@ -244,6 +244,10 @@ h2 {
     color: var(--primary);
 }
 
+#getGame fieldset:first-of-type {
+    margin-bottom: 1rem;
+}
+
 /*************************** Footer ***************************/
 footer {
     /* colors */

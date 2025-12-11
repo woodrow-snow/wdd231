@@ -7,7 +7,8 @@
             "p_max": "10",
             "time": "15 min",
             "age": "8",
-            "link": "https://bicyclecards.com/how-to-play/gin-rummy"
+            "link": "https://bicyclecards.com/how-to-play/gin-rummy",
+            "co-opType": "comp"
         },
         {
             "id": "2",
@@ -16,7 +17,8 @@
             "p_max": "1",
             "time": "10 Min",
             "age": "8",
-            "link": "https://bicyclecards.com/how-to-play/solitaire"
+            "link": "https://bicyclecards.com/how-to-play/solitaire",
+            "co-opType": "comp"
         },
         {
             "id": "3",
@@ -25,7 +27,8 @@
             "p_max": "6",
             "time": "20 min",
             "age": "3",
-            "link": "https://bicyclecards.com/how-to-play/go-fish"
+            "link": "https://bicyclecards.com/how-to-play/go-fish",
+            "co-opType": "comp"
         },
         {
             "id": "4",
@@ -34,7 +37,8 @@
             "p_max": "5",
             "time": "30 min",
             "age": "8",
-            "link": "https://bicyclecards.com/how-to-play/trash"
+            "link": "https://bicyclecards.com/how-to-play/trash",
+            "co-opType": "comp"
         },
         {
             "id": "5",
@@ -43,7 +47,8 @@
             "p_max": "10",
             "time": "1 hour",
             "age": "18",
-            "link": "https://bicyclecards.com/how-to-play/blackjack"
+            "link": "https://bicyclecards.com/how-to-play/blackjack",
+            "co-opType": "comp"
         },
         {
             "id": "6",
@@ -52,7 +57,8 @@
             "p_max": "2",
             "time": "40 min",
             "age": "3",
-            "link": "https://bicyclecards.com/how-to-play/war"
+            "link": "https://bicyclecards.com/how-to-play/war",
+            "co-opType": "comp"
         },
         {
             "id": "7",
@@ -61,7 +67,8 @@
             "p_max": "10",
             "time": "30 min",
             "age": "13",
-            "link": "https://bicyclecards.com/how-to-play/i-doubt-it"
+            "link": "https://bicyclecards.com/how-to-play/i-doubt-it",
+            "co-opType": "comp"
         },
         {
             "id": "8",
@@ -70,7 +77,8 @@
             "p_max": "10",
             "time": "20 min",
             "age": "4",
-            "link": "https://bicyclecards.com/how-to-play/crazy-eights"
+            "link": "https://bicyclecards.com/how-to-play/crazy-eights",
+            "co-opType": "comp"
         },
         {
             "id": "9",
@@ -79,7 +87,8 @@
             "p_max": "5",
             "time": "20 min",
             "age": "8",
-            "link": "https://bicyclecards.com/how-to-play/palace"
+            "link": "https://bicyclecards.com/how-to-play/palace",
+            "co-opType": "comp"
         },
         {
             "id": "10",
@@ -88,7 +97,8 @@
             "p_max": "10",
             "time": "45 min",
             "age": "18",
-            "link": "https://bicyclecards.com/how-to-play/rummy-rum"
+            "link": "https://bicyclecards.com/how-to-play/rummy-rum",
+            "co-opType": "comp"
         },
         {
             "id": "11",
@@ -97,7 +107,8 @@
             "p_max": "10",
             "time": "10 min",
             "age": "8",
-            "link": "https://bicyclecards.com/how-to-play/egyptian-rat-screw"
+            "link": "https://bicyclecards.com/how-to-play/egyptian-rat-screw",
+            "co-opType": "comp"
         },
         {
             "id": "12",
@@ -106,7 +117,8 @@
             "p_max": "6",
             "time": "30 min",
             "age": "13",
-            "link": "https://bicyclecards.com/how-to-play/hearts"
+            "link": "https://bicyclecards.com/how-to-play/hearts",
+            "co-opType": "comp"
         },
         {
             "id": "13",
@@ -115,7 +127,8 @@
             "p_max": "10",
             "time": "60 min",
             "age": "13",
-            "link": "https://bicyclecards.com/how-to-play/spades"
+            "link": "https://bicyclecards.com/how-to-play/spades",
+            "co-opType": "comp"
         },
         {
             "id": "14",
@@ -124,7 +137,8 @@
             "p_max": "10",
             "time": "30 min",
             "age": "4",
-            "link": "https://bicyclecards.com/how-to-play/spoons"
+            "link": "https://bicyclecards.com/how-to-play/spoons",
+            "co-opType": "comp"
         },
         {
             "id": "15",
@@ -133,7 +147,8 @@
             "p_max": "4",
             "time": "30 min",
             "age": "8",
-            "link": "https://bicyclecards.com/how-to-play/kings-corner"
+            "link": "https://bicyclecards.com/how-to-play/kings-corner",
+            "co-opType": "comp"
         }
     ] 
 }

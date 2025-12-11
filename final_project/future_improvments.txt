@@ -5,8 +5,11 @@ Here are some notes for my future plans for this project
         - do in the games name ex: War (playing cards)
 [O] - add sorting for co-op and competitive games
         [X] - add co-op question on add pages
-        [ ] - add JS to ensure it is added to localStorage
+        [X] - add JS to ensure it is added to localStorage
+        [X] - make sure co-op type is reflected in table
         [ ] - add co-op question to main game picker on index.html
+        [ ] - handle co-op or competitive type in dialog modal
+        [ ] - Everything added to board.html needs to be added to card
 [ ] - add option to disable use of base games in picker on home
 [ ] - Add requried parameter to player count
         - if that doesn't work, find another way
@@ -21,6 +24,7 @@ Here are some notes for my future plans for this project
 [ ] - Add toggle for use of base games on home page in .base-games on index.html
 [ ] - Add animation to nav to shift color over time when hover over li element
 [ ] - Add video Game section
+[ ] - add function to allow users to edit games
 
 Update 25.1
 * Added confirmation for uploading data

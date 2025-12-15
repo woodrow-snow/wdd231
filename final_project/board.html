@@ -63,7 +63,7 @@
         <h2>Add a Board Game</h2>
         <form method="GET" id="addBoard" action="thankyou.html">
             <label for="name">Games Name:<input type="text" id="name" name="name" required placeholder="Sorry!"></label>
-            <label for="length">Games Length:<input type="text" id="length" name="length" required placeholder="30 min"></label>
+            <label for="length">Games Length:<input type="text" id="length" name="length" required placeholder="30 min" pattern="\d+\smin"></label>
             <label for="pMin">Min Players:<input type="number" id="pMin" name="pMin" required placeholder="1"></label>
             <label for="pMax">Max Players:<input type="number" id="pMax" name="pMax" required placeholder="10"></label>
             <label for="age">Youngest Age:<input type="number" min="2" id="age" name="age" placeholder="8" required></label>

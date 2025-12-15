@@ -16,7 +16,7 @@ Here are some notes for my future plans for this project
 [ ] - Add an FAQ page, have in footer and have link on index page
         - have videos for how to do some things
 [ ] - Add penguin dancing across the screen that says "Roes penguin" (easter egg)
-[0] - Create a download both button on data.html
+[ ] - Create a download both button on data.html
 [X] - Add link on home page to show base games
 [X] - Add link to game instructions for base games
 [ ] - Add string formatting for the time adding in board and card game sections

@@ -19,8 +19,8 @@ Here are some notes for my future plans for this project
 [ ] - Create a download both button on data.html
 [X] - Add link on home page to show base games
 [X] - Add link to game instructions for base games
-[ ] - Add string formatting for the time adding in board and card game sections
-[ ] - add link in footer to improvments plan on Github
+[X] - Add string formatting for the time adding in board and card game sections
+[X] - add link in footer to improvments plan on Github
 [ ] - Add toggle for use of base games on home page in .base-games on index.html
 [ ] - Add animation to nav to shift color over time when hover over li element
 [ ] - Add video Game section

@@ -55,14 +55,14 @@
         <div class="gamePicker">
             <h2>Pick a Game!</h2>
             <form id="getGame">
-                <label for="playerCount">People Playing (min of 1):<input type="number" id="playerCount" name="playerCount" min="1"></label>
-                <fieldset>
+                <label for="playerCount" id="pcCount">People Playing (min of 1):<input type="number" id="playerCount" name="playerCount" min="1"></label>
+                <fieldset id="gameTypes">
                     <legend>Game Type</legend>
                     <label for="all"><input type="radio" id="all" name="gameType" value="all">All Games</label>
                     <label for="board"><input type="radio" id="board" name="gameType" value="board">Board Games</label>
                     <label for="card"><input type="radio" id="card" name="gameType" value="card">Card Games</label>
                 </fieldset>
-                <fieldset>
+                <fieldset id="coopTypes">
                     <legend>Co-op Type</legend>
                     <label for="coop"><input type="radio" id="coop" name="coopType" value="coop">Co-op</label>
                     <label for="comp"><input type="radio" id="comp" name="coopType" value="comp">Competitive</label>

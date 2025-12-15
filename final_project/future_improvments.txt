@@ -3,20 +3,20 @@ Here are some notes for my future plans for this project
 [X] - Add confirmation for uploading data
 [X] - For base games, add that they use playing cards
         - do in the games name ex: War (playing cards)
-[O] - add sorting for co-op and competitive games
+[X] - add sorting for co-op and competitive games
         [X] - add co-op question on add pages
         [X] - add JS to ensure it is added to localStorage
         [X] - make sure co-op type is reflected in table
         [X] - add co-op question to main game picker on index.html
         [X] - handle co-op or competitive type in dialog modal and in JS for picking game
-        [ ] - Everything added to board.html needs to be added to card
+        [X] - Everything added to board.html needs to be added to card
 [ ] - add option to disable use of base games in picker on home
-[ ] - Add requried parameter to player count
+[X] - Add requried parameter to player count
         - if that doesn't work, find another way
 [ ] - Add an FAQ page, have in footer and have link on index page
         - have videos for how to do some things
 [ ] - Add penguin dancing across the screen that says "Roes penguin" (easter egg)
-[ ] - Create a download both button on data.html
+[0] - Create a download both button on data.html
 [X] - Add link on home page to show base games
 [X] - Add link to game instructions for base games
 [ ] - Add string formatting for the time adding in board and card game sections
@@ -37,4 +37,6 @@ Update 25.2.1
 * Started sorting for co-op and competitive games
 
 Update 25.2.2
-* 
+* Finished sorting for co-op and competivte games
+* added columns for co-op type on game tables
+* Added functionality to game picker to make sure values were entered avoid app breaking bugs

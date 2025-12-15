@@ -8,7 +8,7 @@ Here are some notes for my future plans for this project
         [X] - add JS to ensure it is added to localStorage
         [X] - make sure co-op type is reflected in table
         [X] - add co-op question to main game picker on index.html
-        [ ] - handle co-op or competitive type in dialog modal and in JS for picking game
+        [X] - handle co-op or competitive type in dialog modal and in JS for picking game
         [ ] - Everything added to board.html needs to be added to card
 [ ] - add option to disable use of base games in picker on home
 [ ] - Add requried parameter to player count

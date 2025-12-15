@@ -1,6 +1,5 @@
 // import statement
 import { getFromLocalStorage } from '../functions.mjs' 
-import { makeUnclickable } from './make_unclickable.mjs';
 
 export function createDownloadFile(downloadBtn,gameType){
     // getting data from localStorage
@@ -15,3 +14,19 @@ export function createDownloadFile(downloadBtn,gameType){
 
     return gameURL;
 }
+
+// export function createBothDownloadFile(downloadBtn){
+//     // getting data from localStorage
+//     const cardData = getFromLocalStorage('cardGames');
+//     const boardData = getFromLocalStorage('boardGames');
+
+//     // creating blob and url for card games
+//     const combined = {cardGames: cardData, boardGames: boardData};
+//     const blob = new Blob([JSON.stringify(combined,null,2)], {type: "application/json"});
+//     const url = window.URL.createObjectURL(blob);
+
+//     downloadBtn.href = url;
+//     downloadBtn.download = `allGames.json`;
+
+//     return url;
+// }

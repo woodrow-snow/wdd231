@@ -60,6 +60,18 @@
     color: var(--primary);
 }
 
+/*************************** wrong ***************************/
+.wrong {
+    border: 2px solid red;
+    border-radius: 5px;
+    padding: 0.5rem;
+}
+
+.wrong::after {
+    text-align: center;
+    content: '^^^ Please enter in Info above ^^^';
+}
+
 @media only screen and (min-width:600px){
     .base-games a {
         margin: 0 auto;

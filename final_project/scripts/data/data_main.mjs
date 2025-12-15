@@ -1,6 +1,6 @@
 // this is the main js file for the data page
 // import statements
-import { createDownloadFile } from "./create_file.mjs";
+import { createDownloadFile, createBothDownloadFile } from "./create_file.mjs";
 import { makeUnclickable } from "./make_unclickable.mjs";
 import { setInLocalStorage } from "../functions.mjs";
 import { getGameType } from "../index/get_random_game.mjs";
@@ -10,12 +10,17 @@ import { addSuccessMessage } from "./add_success.mjs";
 // ---------- handling downloading of data ----------
 const cardLink = document.querySelector('#cardDownload');
 const boardLink = document.querySelector('#boardDownload');
+const bothLink = document.querySelector('#bothDownload');
 
 // creating links
 const cardURL = createDownloadFile(cardLink,'card');
 const boardURL = createDownloadFile(boardLink,'board');
+// const bothURL = [createDownloadFile(cardLink,'card'), createDownloadFile(boardLink,'board')];
 let cardClicked = false;
 let boardClicked = false;
+// let bothClicked = false;
+
+console.log(bothURL);
 
 // creating event listeners to make sure links get removed after download
 cardLink.addEventListener('click', () => {
@@ -28,6 +33,13 @@ boardLink.addEventListener('click', () => {
     boardClicked = true;
 });
 
+// bothLink.addEventListener('click',() => {
+//     makeUnclickable(cardLink);
+//     makeUnclickable(boardLink);
+//     makeUnclickable(bothLink);
+//     bothClicked = true;
+// });
+
 if (cardClicked) {
     window.URL.revokeObjectURL(cardURL);
 }
@@ -35,6 +47,10 @@ if (cardClicked) {
 if (boardClicked){
     window.URL.revokeObjectURL(boardURL);
 }
+
+// if (bothClicked){
+//     window.URL.revokeObjectURL(bothURL);
+// }
 
 
 // ---------- handing form information and uploading of data ----------

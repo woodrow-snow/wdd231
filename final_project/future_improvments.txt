@@ -33,5 +33,8 @@ Update 25.1
 * Added link to game instructions for base games
 * made it so upload data button can be clicked as many times as needed
 
-Update 25.2
-* add sorting for co-op and competitive games
+Update 25.2.1
+* Started sorting for co-op and competitive games
+
+Update 25.2.2
+* 

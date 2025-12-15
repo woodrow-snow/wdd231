@@ -45,20 +45,6 @@ export async function getRandomGame(baseURL){
 
     // creating array for all games to go in then filling in if statement
     if (type == 'all'){
-        // getting highestIndex
-        highestIndex += DEFAULT_GAMES_COUNT;
-        
-        if (cardGames.length != 0) {
-            highestIndex += cardGames.length;
-        }
-        
-        if (boardGames.length != 0) {
-            highestIndex += boardGames.length;
-        }
-        else if (boardGames.length == 0) {
-            // hanlding no boardGames
-            handleNoBoard();
-        }
 
         // creating array with all games
         // adding base card games
@@ -77,8 +63,6 @@ export async function getRandomGame(baseURL){
     }
     else if (type == 'board') {
         if (boardGames.length != 0) {
-            highestIndex += boardGames.length;
-
             //adding board games
             boardGames.forEach(b => {
                 allGames.push(b);
@@ -91,8 +75,6 @@ export async function getRandomGame(baseURL){
     }
     else if (type == 'card'){
         // getting highest index
-        highestIndex += DEFAULT_GAMES_COUNT;
-
         if (cardGames.length != 0) {
             highestIndex += cardGames.length;
         }
@@ -106,59 +88,40 @@ export async function getRandomGame(baseURL){
         }); 
     }
 
-    // removing one from highestIndex to make 0 based
-    highestIndex -= 1;
+    // ensuring all games have a co-opType key:value pair
+    allGames.forEach(game => {
+        if(!('co-opType' in game)){
+            game['co-opType'] = null;
+        }
+    });
+
+    // filtering allGames to only specified game types
+    const filteredGames = allGames.filter(g => {
+        // filtering to ensure games of choosen co-op type are in the new list. This includes NULL games
+        return g['co-opType'] == coopType || g['co-opType'] == null
+    });
+
+    // getting the highest index
+    highestIndex = filteredGames.length - 1;
 
     // select random game
-    let chosenGame = chooseGame(allGames,highestIndex) 
+    let chosenGame = chooseGame(filteredGames,highestIndex) 
 
     // getting player amount
     const playerAmount = document.querySelector('#playerCount').value;
 
-    // check to make sure it fits player amount and cooperation type
+    // check to make sure it fits player amount and cooperation type    
     while(true){
-        let validPlayerCount = false;
-        let vaildCoopType = false;
-
         // getting choosen games min and mix
         let player_max = chosenGame.p_max;
         let player_min = chosenGame.p_min;
 
         // might have to revist how to do this
         if (playerAmount < player_min || playerAmount > player_max ){
-            validPlayerCount = false;
+            chosenGame = chooseGame(filteredGames,highestIndex);
         }
         else {
-            validPlayerCount = true;
-        }
-        
-        // checking if co-opType exsists
-        let cooperationType;
-
-        if (!('co-opType' in chosenGame)) {
-            cooperationType = 'allCoop';
-        }
-        else {
-            cooperationType = chosenGame['co-opType']; 
-        }
-
-        // checking co-op type
-        if (coopType == 'allCoop') {
-            vaildCoopType = true;
-        }
-        else if (coopType == cooperationType) {
-            vaildCoopType = true;
-        }
-        else {
-            vaildCoopType = false;
-        }
-
-        // if both are true you can return, else get a new game
-        if (vaildCoopType && validPlayerCount) {
             break;
-        }
-        else {
-            chosenGame = chooseGame(allGames,highestIndex);
         }
     }
 
@@ -172,7 +135,7 @@ export async function getRandomGame(baseURL){
 }
 
 function chooseGame(games,index){
-    let chosenNum = generateNumber(1,index);
+    let chosenNum = generateNumber(0,index);
     return games[chosenNum]; 
 }
 
@@ -228,6 +191,9 @@ function buildDialog(game, dialog){
     const age = document.createElement('p');
     age.textContent = `Ages ${game.age}+`
 
+    const gameCoopType = document.createElement('p');
+    gameCoopType.textContent = `Cooperation Type: ${game['co-opType']}`
+
     // getting if chosen game is a base game, if it is adding game instrucitons link
     const gameName = game.name;
     let isBaseGame = false;
@@ -252,6 +218,7 @@ function buildDialog(game, dialog){
     dialog.append(players);
     dialog.append(time);
     dialog.append(age);
+    dialog.append(gameCoopType);
 
     if (isBaseGame) {
         dialog.append(link);

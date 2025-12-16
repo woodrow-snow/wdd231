@@ -24,7 +24,7 @@ Here are some notes for my future plans for this project
 [ ] - Add toggle for use of base games on home page in .base-games on index.html
 [ ] - Add animation to nav to shift color over time when hover over li element
 [ ] - Add video Game section
-[ ] - add function to allow users to edit games
+[0] - add function to allow users to edit games
 
 Update 25.1
 * Added confirmation for uploading data
@@ -40,3 +40,6 @@ Update 25.2.2
 * Finished sorting for co-op and competivte games
 * added columns for co-op type on game tables
 * Added functionality to game picker to make sure values were entered avoid app breaking bugs
+
+Update 25.3
+* working on feature to allow users to edit their games

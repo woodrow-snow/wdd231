@@ -17,9 +17,13 @@ Here are some notes for my future plans for this project
 [ ] - add link in footer to improvments plan on Github
 [ ] - Add toggle for use of base games on home page in .base-games on index.html
 [ ] - Add animation to nav to shift color over time when hover over li element
+[ ] - Add video Game section
+[0] - add function to allow users to edit games
 
 Update 25.1
 * Added confirmation for uploading data
 * For base games, added that they use playing cards
 * Added link on home page to show base games
 * Added link to game instructions for base games
+Update 25.3
+* working on feature to allow users to edit their games

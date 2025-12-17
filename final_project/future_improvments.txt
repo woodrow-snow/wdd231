@@ -25,6 +25,10 @@ Here are some notes for my future plans for this project
 [ ] - Add animation to nav to shift color over time when hover over li element
 [ ] - Add video Game section
 [0] - add function to allow users to edit games
+[ ] - add how to play link for user entered board and card games
+[ ] - !!! need to look into how data for co-opType is being handled by games entry, values are not what expected !!!
+        - Way getCoopType on display_game.mjs for edit page will need to be changed as well
+[ ] - add delete function
 
 Update 25.1
 * Added confirmation for uploading data

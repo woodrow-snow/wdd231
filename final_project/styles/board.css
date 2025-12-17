@@ -130,6 +130,20 @@ input:required:valid{
     
 }
 
+/*************************** Edit Game ***************************/
+#editGame {
+    /* box model */
+    max-width: 200px;
+    margin: 1rem auto;
+
+    /* text */
+    text-align: center;
+}
+
+#editGame input[type='number'] {
+    margin: 1rem 0;
+}
+
 /*************************** Bigger Screens ***************************/
 @media only screen and (min-width:600px){
     /*************************** Table ***************************/

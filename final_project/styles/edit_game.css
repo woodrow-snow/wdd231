@@ -1,0 +1,106 @@
+/*************************** Form ***************************/
+form{
+    max-width: 200px;
+    margin: 0 auto;
+}
+
+form label {
+    /* flex */
+    display: flex;
+    flex-direction: column;
+    
+    /* box model */
+    margin: 0.5rem;
+    
+    /* font */
+    font-family: var(--body);
+    font-size: 1.2rem;
+}
+
+form label input {
+    /* box model */
+    height: 22px;
+    border-radius: 5px;
+    padding: 5px;
+
+    /* font */
+    font-family: var(--body);
+    font-size: 1rem;
+}
+
+form fieldset {
+    /* box model */
+    border-radius: 5px;
+    padding-left: 6px;
+
+    /* font */
+    font-family: var(--body);
+    font-size: 1.2rem;
+}
+
+form fieldset legend {
+    padding: 0 5px;
+}
+
+form fieldset label {
+    /* flex */
+    display: flex;
+    flex-direction: row;
+    gap: 6px;
+}
+
+form fieldset label input {
+    width: 20px;
+}
+
+.save {
+    /* font */
+    font-family: var(--head);
+    font-size: 1.3rem;
+
+    /* box model */
+    margin: 1rem auto;
+    display: block;
+    padding: 0.5rem;
+    border-radius: 5px;
+    border: none;
+
+    /* color */
+    background-color: var(--primary);
+    color: var(--accent1);
+}
+
+.save:hover {
+    /* color */
+    background-color: var(--secondary);
+    color: var(--black);
+}
+
+/*************************** Required stuffs ***************************/
+input:required{
+    border: 1px solid red;
+}
+
+input:required:valid{
+    border: 1px solid green;
+}
+
+.saved{
+    font-size: 1.2rem;
+    
+    color: #006b00;
+}
+
+/*************************** for larger screens ***************************/
+@media only screen and (min-width:600px){
+    form {
+        max-width: 500px;
+    }
+    
+    .firstSet {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+
+        margin: 0 auto;
+    }
+}

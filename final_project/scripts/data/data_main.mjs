@@ -1,6 +1,6 @@
 // this is the main js file for the data page
 // import statements
-import { createDownloadFile, createBothDownloadFile } from "./create_file.mjs";
+import { createDownloadFile } from "./create_file.mjs";
 import { makeUnclickable } from "./make_unclickable.mjs";
 import { setInLocalStorage } from "../functions.mjs";
 import { getGameType } from "../index/get_random_game.mjs";

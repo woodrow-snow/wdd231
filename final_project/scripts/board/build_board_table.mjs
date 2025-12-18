@@ -33,6 +33,18 @@ export function buildBTableRows(games){
         } else {
             coopType.textContent = game['co-opType'];
         }
+
+        // creating link table row
+        const link = document.createElement('td');
+
+        // checking for link
+        if (!("link" in game)) {
+            link.textContent = 'No Link';
+        }
+        else {
+            link.innerHTML = `<a href="${game.link}" class="tdLink">Click Here</a>`;
+        }
+
         
         // adding td elements to table row
         tableRow.appendChild(id);
@@ -42,6 +54,7 @@ export function buildBTableRows(games){
         tableRow.appendChild(time);
         tableRow.appendChild(age);
         tableRow.appendChild(coopType);
+        tableRow.appendChild(link);
 
         // adding tr to table
         table.append(tableRow);

@@ -130,6 +130,31 @@ input:required:valid{
     
 }
 
+#linkLabel {
+    /* grid */
+    grid-column: 1/3;
+
+    /* box model */
+    width: 100%;
+}
+
+#link {
+    max-width: 100%;
+}
+
+.tdLink {
+    /* colors */
+    color: black;
+
+    /* text */
+    text-decoration: none;
+}
+
+.tdLink:hover {
+    color: var(--accent1);
+    text-decoration: underline;
+}
+
 /*************************** Edit Game ***************************/
 #editGame {
     /* box model */

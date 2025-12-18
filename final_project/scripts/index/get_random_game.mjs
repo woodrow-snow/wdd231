@@ -25,6 +25,7 @@ export async function getRandomGame(baseURL){
     // getting the cooperation type
     const coopTypes = document.getElementsByName('coopType');
     const coopType = getGameType(coopTypes);
+    console.log(coopType);
 
     // getting information form users localStorage
     let cardGames = getFromLocalStorage(CARD);
@@ -49,7 +50,7 @@ export async function getRandomGame(baseURL){
         // creating array with all games
         // adding base card games
         const gameData = await getData(baseURL);
-        fillBaseGames(allGames,gameData)
+        fillBaseGames(allGames,gameData);
         
         //adding board games
         boardGames.forEach(b => {
@@ -59,7 +60,7 @@ export async function getRandomGame(baseURL){
         //adding card games
         cardGames.forEach(c => {
             allGames.push(c);
-        }); 
+        });
     }
     else if (type == 'board') {
         if (boardGames.length != 0) {
@@ -96,22 +97,32 @@ export async function getRandomGame(baseURL){
     });
 
     // filtering allGames to only specified game types
-    const filteredGames = allGames.filter(g => {
-        // filtering to ensure games of choosen co-op type are in the new list. This includes NULL games
-        return g['co-opType'] == coopType || g['co-opType'] == null
-    });
+    let filteredGames;
+    if (coopType != 'allCoop') {
+        filteredGames = allGames.filter(g => {
+            // filtering to ensure games of choosen co-op type are in the new list. This includes NULL games
+            return g['co-opType'] == coopType || g['co-opType'] == null
+        });
+    }
+    else {
+        filteredGames = allGames;
+    }
+
+    console.log(filteredGames);
 
     // getting the highest index
     highestIndex = filteredGames.length - 1;
 
     // select random game
-    let chosenGame = chooseGame(filteredGames,highestIndex) 
+    let chosenGame = chooseGame(filteredGames,highestIndex) // on both, is reading undefined, might need to add a conidition to filter for both
 
     // getting player amount
     const playerAmount = document.querySelector('#playerCount').value;
 
     // check to make sure it fits player amount and cooperation type    
     while(true){
+        console.log(chosenGame);
+
         // getting choosen games min and mix
         let player_max = chosenGame.p_max;
         let player_min = chosenGame.p_min;
@@ -196,15 +207,15 @@ function buildDialog(game, dialog){
 
     // getting if chosen game is a base game, if it is adding game instrucitons link
     const gameName = game.name;
-    let isBaseGame = false;
-    let link;
+    let hasLink = false;
+    let glink;
 
-    if (gameName.includes('(Playing Cards)')) {
-        link = document.createElement('a');
-        link.href = game.link;
-        link.textContent = `Learn how to play ${gameName} here!`
-        
-        isBaseGame = true;
+    if('link' in game){
+        glink = document.createElement('a');
+        glink.href = game.link;
+        glink.textContent = `Learn how to play ${gameName} here!`
+
+        hasLink = true
     }
 
     // creating div for h2 and closebtn and adding elements
@@ -220,7 +231,7 @@ function buildDialog(game, dialog){
     dialog.append(age);
     dialog.append(gameCoopType);
 
-    if (isBaseGame) {
-        dialog.append(link);
+    if (hasLink) {
+        dialog.append(glink);
     }
 }

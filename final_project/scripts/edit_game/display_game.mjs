@@ -41,6 +41,7 @@ export function displaySelectedGame(gamesArray,gid,LSName){
             p_max: document.querySelector('#pMax').value,
             time: document.querySelector('#length').value,
             age: document.querySelector('#age').value,
+            link: document.querySelector('#link').value,
             "co-opType": getGameType(document.getElementsByName('coopType'))
         };
 
@@ -78,6 +79,16 @@ function updateGame(allGames,gid,newGame,gamesType){
 
 function createEditForm(g, container){
     const editForm = document.createElement('form');
+    
+    // checking if link has a value
+    let linkInsert = '';
+    if (g.link == undefined) {
+        linkInsert = "placeholder=\"https://\"";
+    }
+    else {
+        linkInsert = `value="${g.link}"`;
+    }
+
     editForm.innerHTML = `
         <div class="firstSet">
             <label>Name:<input type="text" id="name" name="name" required value="${g.name}"></label>
@@ -88,9 +99,10 @@ function createEditForm(g, container){
         </div>
         <fieldset class="coopTypeField">
             <legend>Co-op Type: </legend>
-            <label for="coop"><input type="radio" id="coop" name="coopType" value="coop" ${getCoopType(g,'Co-op')}>Co-op</label>
-            <label><input type="radio" id="comp" name="coopType" value="comp" ${getCoopType(g,'Competitive')}>Competitive</label>
+            <label for="coop"><input type="radio" id="coop" name="coopType" value="coop" ${getCoopType(g,'coop')}>Co-op</label>
+            <label><input type="radio" id="comp" name="coopType" value="comp" ${getCoopType(g,'comp')}>Competitive</label>
         </fieldset>
+        <label for="link" id="linkLabel">Instructions Link (Optional):<input type="text" id="link" name="link" ${linkInsert}></label>
     `
 
     container.append(editForm);

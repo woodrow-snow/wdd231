@@ -1,19 +1,12 @@
 // this is the main js file for the thank you page for adding board and card games
 // import statements
-import { getFromLocalStorage, setInLocalStorage } from "../functions.mjs";
-
-// updating html on thankyou page for better nav identification
-// getting nav from page
-const cardNav = document.querySelector('.card');
-const boardNav = document.querySelector('.board');
+import { getFromLocalStorage, setInLocalStorage, updateLocalNav } from "../functions.mjs";
 
 // getting info from browser 
 const data = new URLSearchParams(window.location.search);
 
-if (boardNav.classList.contains('current') && data.get('gameType') == 'card'){
-    boardNav.classList.remove('current');
-    cardNav.classList.add('current');
-}
+// ---------- updating html on thankyou page for better nav identification ----------
+updateLocalNav(data.get('gameType'));
 
 // getting elements from docuemnt
 const thankYou = document.querySelector('#thank-you-message');
@@ -31,13 +24,14 @@ if (allGames == null) {
 console.log(allGames);
 
 // getting cooperation type
-let gameCoopType = data.get('coopType');
+const gameCoopType = data.get('coopType');
+let displayCoopType;
 
 if (gameCoopType == 'coop') {
-    gameCoopType = 'Co-op';
+    displayCoopType = 'Co-op';
 }
 else if (gameCoopType == 'comp') {
-    gameCoopType = "Competitive";
+    displayCoopType = "Competitive";
 }
 
 // creating message
@@ -47,7 +41,8 @@ thankYou.innerHTML = `
     <h3>Name: ${data.get('name')}</h3>
     <p>Number of Players: ${data.get('pMin')} to ${data.get('pMax')}</p>
     <p>Recommended Age: ${data.get('age')}+</p>
-    <p>Cooperation Type: ${gameCoopType}</p>
+    <p>Cooperation Type: ${displayCoopType}</p>
+    <p>Instructions Link: <a href="${data.get('link')}">${data.get('link')}</a></p>
 `;
 
 // adding data to localStorage
@@ -59,6 +54,7 @@ const newGame = {
     p_max:data.get('pMax'),
     time:data.get('length'),
     age:data.get('age'),
+    link:data.get('link'),
     'co-opType':gameCoopType
 }
 

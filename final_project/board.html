@@ -57,6 +57,7 @@
                 <th>Avg Time</th>
                 <th>Age</th>
                 <th>Co-op Type</th>
+                <th>Link</th>
             </tr>
             <!-- other rows will be added via JavaScript -->
         </table>
@@ -72,6 +73,7 @@
                 <label for="coop"><input type="radio" id="coop" name="coopType" value="coop">Co-op</label>
                 <label><input type="radio" id="comp" name="coopType" value="comp">Competitive</label>
             </fieldset>
+            <label for="link" id="linkLabel">Instructions Link (Optional):<input type="text" id="link" name="link" placeholder="https://"></label>
             <input type="hidden" id="board" name="gameType" value="board">
             <input type="submit" value="Add Board Game">
         </form>

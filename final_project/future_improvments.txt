@@ -29,22 +29,22 @@
 [X] - !!! need to look into how data for co-opType is being handled by games entry, values are not what expected !!!
 [X] - add how to play link for user entered board and card games
 
-Update 25.1
+---------- Update 25.1 ----------
 * Added confirmation for uploading data
 * For base games, added that they use playing cards
 * Added link on home page to show base games
 * Added link to game instructions for base games
 * made it so upload data button can be clicked as many times as needed
 
-Update 25.2.1
+---------- Update 25.2.1 ----------
 * Started sorting for co-op and competitive games
 
-Update 25.2.2
+---------- Update 25.2.2 ----------
 * Finished sorting for co-op and competivte games
 * added columns for co-op type on game tables
 * Added functionality to game picker to make sure values were entered avoid app breaking bugs
 
-Update 25.3
+---------- Update 25.3 ----------
 * Finished feature to allow users to edit their games
 * Investigated concerns with now Co-op type was being handled
 * added link option to games

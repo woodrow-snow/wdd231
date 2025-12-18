@@ -8,7 +8,6 @@
 [ ] - Add toggle for use of base games on home page in .base-games on index.html
 [ ] - Add animation to nav to shift color over time when hover over li element
 [ ] - Add video Game section
-[0] - add how to play link for user entered board and card games
 [ ] - add delete function
 
 ---------- Completed Tasks ----------
@@ -28,7 +27,7 @@
 [X] - add link in footer to improvments plan on Github
 [X] - add function to allow users to edit games
 [X] - !!! need to look into how data for co-opType is being handled by games entry, values are not what expected !!!
-
+[X] - add how to play link for user entered board and card games
 
 Update 25.1
 * Added confirmation for uploading data

@@ -38,7 +38,7 @@ export function buildBTableRows(games){
         const link = document.createElement('td');
 
         // checking for link
-        if (!("link" in game)) {
+        if (!("link" in game) || game.link == '') {
             link.textContent = 'No Link';
         }
         else {

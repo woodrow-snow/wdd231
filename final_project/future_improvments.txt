@@ -6,8 +6,6 @@
 [ ] - Add penguin dancing across the screen that says "Roes penguin" (easter egg)
 [ ] - Create a download both button on data.html
 [ ] - Add toggle for use of base games on home page in .base-games on index.html
-[0] - Add video Game section
-[ ] - a go back button on thank you page.
 [ ] - apply nav animation to all buttons?
 
 ---------- Completed Tasks ----------
@@ -30,6 +28,10 @@
 [X] - add how to play link for user entered board and card games
 [X] - Add animation to nav to shift color over time when hover over li element
 [X] - add delete function
+[X] - Add video Game section
+[X] - handle event in delete function where the selected ID doesn't exist
+[X] - need to add function to adjust ids after a game is deleted
+[X] - a go back button on thank you page.
 
 
 ---------- Update 25.1 ----------
@@ -61,4 +63,7 @@
 * added current version to footer
 
 ---------- Update 25.5 ----------
-* Working on Adding Video Games page
+* Added Video Games page
+* added code to handle the event where an ID is provided that does not exist
+* added code to update ids after a game has been deleted
+* added a go back button on thank you page

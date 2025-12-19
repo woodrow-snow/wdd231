@@ -10,17 +10,18 @@ import { addSuccessMessage } from "./add_success.mjs";
 // ---------- handling downloading of data ----------
 const cardLink = document.querySelector('#cardDownload');
 const boardLink = document.querySelector('#boardDownload');
-const bothLink = document.querySelector('#bothDownload');
+const videoLink = document.querySelector('#videoDownload');
+// const bothLink = document.querySelector('#bothDownload');
 
 // creating links
 const cardURL = createDownloadFile(cardLink,'card');
 const boardURL = createDownloadFile(boardLink,'board');
+const videoURL = createDownloadFile(videoLink,'video');
 // const bothURL = [createDownloadFile(cardLink,'card'), createDownloadFile(boardLink,'board')];
 let cardClicked = false;
 let boardClicked = false;
+let videoClicked = false;
 // let bothClicked = false;
-
-console.log(bothURL);
 
 // creating event listeners to make sure links get removed after download
 cardLink.addEventListener('click', () => {
@@ -30,6 +31,11 @@ cardLink.addEventListener('click', () => {
 
 boardLink.addEventListener('click', () => {
     makeUnclickable(boardLink);
+    boardClicked = true;
+});
+
+videoLink.addEventListener('click', () => {
+    makeUnclickable(videoLink);
     boardClicked = true;
 });
 
@@ -46,6 +52,10 @@ if (cardClicked) {
 
 if (boardClicked){
     window.URL.revokeObjectURL(boardURL);
+}
+
+if (videoClicked){
+    window.URL.revokeObjectURL(videoURL);
 }
 
 // if (bothClicked){

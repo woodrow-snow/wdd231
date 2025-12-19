@@ -3,13 +3,14 @@
 import { generateNumber } from "./randon_num.mjs";
 import { getData } from '../get_data.mjs';
 import { getFromLocalStorage } from "../functions.mjs";
-import { handleNoBoard } from "./no_board.mjs";
+import { handleNoBoard, handleNoVideo } from "./no_board.mjs";
 import { deleteMsgs } from "./delete_error_msg.mjs";
 
 // global vars
 const DEFAULT_GAMES_COUNT = 10;
 const CARD = 'cardGames';
 const BOARD = 'boardGames';
+const VIDEO = 'videoGames';
 
 export async function getRandomGame(baseURL){
     // check what game type
@@ -30,6 +31,7 @@ export async function getRandomGame(baseURL){
     // getting information form users localStorage
     let cardGames = getFromLocalStorage(CARD);
     let boardGames = getFromLocalStorage(BOARD);
+    let videoGames = getFromLocalStorage(VIDEO);
 
     // making sure there is an empty array if they return null
     if (cardGames == null) {
@@ -38,6 +40,10 @@ export async function getRandomGame(baseURL){
 
     if (boardGames == null) {
         boardGames = [];
+    }
+
+    if (videoGames == null) {
+        videoGames = [];
     }
 
     // getting highest index number based on game type and creating array of all needed games
@@ -87,6 +93,17 @@ export async function getRandomGame(baseURL){
         cardGames.forEach(c => {
             allGames.push(c);
         }); 
+    }
+    else if (type == 'video') {
+        if (videoGames.length != 0) {
+            // adding video games
+            videoGames.forEach(v => {
+                allGames.push(v);
+            });
+        }
+        else {
+            handleNoVideo();
+        }   
     }
 
     // ensuring all games have a co-opType key:value pair
@@ -210,7 +227,10 @@ function buildDialog(game, dialog){
     let hasLink = false;
     let glink;
 
-    if('link' in game){
+    if ('link' in game && game.link == ''){
+        hasLink = false;
+    }
+    else if('link' in game){
         glink = document.createElement('a');
         glink.href = game.link;
         glink.textContent = `Learn how to play ${gameName} here!`

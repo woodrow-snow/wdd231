@@ -400,6 +400,11 @@ footer a:hover {
         width: 100%;
         border-left: 1px solid var(--primary);
         border-right: 1px solid var(--primary);
+
+        /* flex */
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
     .gamePicker {

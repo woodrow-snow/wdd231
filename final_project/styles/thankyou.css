@@ -12,3 +12,28 @@ h3{
 p{
     margin: 0.5rem;
 }
+
+#goBack {
+    /* text */
+    text-decoration: none;
+    text-align: center;
+
+    /* font */
+    font: 1.3rem var(--body);
+
+    /* colors */
+    color: var(--accent1);
+    background-color: var(--primary);
+
+    /* box model */
+    display: block;
+    margin: 1rem auto;
+    padding: 0.5rem;
+    border-radius: 5px;
+    max-width: 100px;
+}
+
+#goBack:hover {
+    color: black;
+    background-color: var(--secondary);
+}

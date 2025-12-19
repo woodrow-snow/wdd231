@@ -6,6 +6,16 @@ export function deleteGame(allGames,dGame,gameType){
         return g.id != dGame.id; 
     });
 
+    // fixing game ids
+    fixGameIds(gamesWithoutDeleted);
+
     // saving new array to localStorage
     setInLocalStorage(`${gameType}Games`,gamesWithoutDeleted);
+}
+
+function fixGameIds(games){
+    for (let i = 0;i < games.length; i++){
+        let newID = i + 1;
+        games[i].id = newID;
+    }
 }

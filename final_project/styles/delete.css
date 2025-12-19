@@ -94,7 +94,7 @@ input:required:valid {
     text-align: center;
 }
 
-.submitDelete {
+.submitDelete, #goBack {
     /* colors */
     background-color: var(--primary);
     color: var(--accent1);
@@ -110,13 +110,22 @@ input:required:valid {
     font: 1.5rem var(--body);
 }
 
-.submitDelete:hover {
+.submitDelete:hover, #goBack:hover {
     color: black;
     background-color: var(--secondary);
 }
 
+#goBack {
+    /* box model */
+    display: block;
+
+    /* text */
+    text-align: center;
+    text-decoration: none;
+}
+
 @media only screen and (min-width:600px){
-    .submitDelete {
+    .submitDelete, #goBack {
         width: 25%;
     }
 }

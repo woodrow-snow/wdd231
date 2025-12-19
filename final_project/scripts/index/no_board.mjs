@@ -15,3 +15,19 @@ export function handleNoBoard(){
 
     picker.append(errorMessage);
 }
+
+export function handleNoVideo(){
+    //checking if message already exists
+    deleteMsgs();
+
+    // getting elements from document
+    const picker = document.querySelector('.gamePicker');
+
+    // creating text element
+    const vErrorMsg = document.createElement('p');
+    vErrorMsg.textContent = 'There are no video games!'
+    vErrorMsg.classList.add('noBoard');
+
+    picker.append(vErrorMsg);
+
+}

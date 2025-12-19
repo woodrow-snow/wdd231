@@ -76,3 +76,8 @@ allGames.push(newGame);
 
 // saving data to localStorage
 setInLocalStorage(TYPE_LS_NAME,allGames);
+
+// ---------- Adding go back button ----------
+const backBtn = document.querySelector('#goBack');
+
+backBtn.href = `${data.get('gameType')}.html`

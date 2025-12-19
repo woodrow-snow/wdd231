@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Board Games</title>
+    <title>Video Games</title>
     <meta name="author" content="Woodrow J. Snow">
-    <meta name="description" content="This page allows users to enter and see the board games they have entered">
+    <meta name="description" content="This page allows users to enter and see the video games they have entered">
 
     <!-- font links -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -20,14 +20,14 @@
     <script src="scripts/navigation.js" defer></script>
     <script src="scripts/getdates.js" defer></script>
     <script src="scripts/getversion.js" defer></script>
-    <script type="module" src="scripts/board/board_main.mjs"></script>
+    <script type="module" src="scripts/video/video_main.mjs"></script> <!-- change here -->
 
     <!-- favicon link -->
     <link rel="icon" href="picker.ico">
 
     <!-- Social Media Properties -->
-    <meta property="og:title" content="Woodrows Game Picker | Board Games">
-    <meta property="og:description" content="This page allows users to enter and see the board games they have entered">
+    <meta property="og:title" content="Woodrows Game Picker | video Games">
+    <meta property="og:description" content="This page allows users to enter and see the video games they have entered">
     <meta property="og:image" content="https://raw.githubusercontent.com/woodrow-snow/wdd231/refs/heads/main/final_project/images/woodrow_game_picker.png">
     <meta property="og:url" content="https://woodrow-snow.github.io/wdd231/final_project/index.html">
 </head>
@@ -40,16 +40,16 @@
     <nav id="nav-bar" class="navigation">
         <ul>
             <li><a href="index.html">Home</a></li>
-            <li><a href="board.html" class="current">Board Games</a></li>
+            <li><a href="board.html">Board Games</a></li>
             <li><a href="card.html">Card Games</a></li>
-            <li><a href="video.html">Video Games</a></li>
+            <li><a href="video.html" class="current">Video Games</a></li>
             <li><a href="delete.html">Delete</a></li>
             <li><a href="data.html">Data</a></li>
         </ul>
     </nav>
     <main>
-        <h1>Board Games</h1>
-        <h2 class="boardHeader">Entered Board Games</h2>
+        <h1>Video Games</h1>
+        <h2 class="boardHeader">Entered Video Games</h2>
         <h2 class="tableHidden">Your screen is too small right now to view the games you have added, turn your screen to go to a bigger device to view them all</h2>
         <table>
             <tr>
@@ -64,12 +64,12 @@
             </tr>
             <!-- other rows will be added via JavaScript -->
         </table>
-        <h2>Add a Board Game</h2>
+        <h2>Add a Video Game</h2>
         <form method="GET" id="addBoard" action="thankyou.html">
-            <label for="name">Games Name:<input type="text" id="name" name="name" required placeholder="Sorry!"></label>
-            <label for="length">Games Length:<input type="text" id="length" name="length" required placeholder="30 min" pattern="\d+\smin"></label>
+            <label for="name">Games Name:<input type="text" id="name" name="name" required placeholder="Minecraft"></label>
+            <label for="length">Games Length:<input type="text" id="length" name="length" placeholder="90 min" pattern="\d+\smin"></label>
             <label for="pMin">Min Players:<input type="number" id="pMin" name="pMin" required placeholder="1"></label>
-            <label for="pMax">Max Players:<input type="number" id="pMax" name="pMax" required placeholder="10"></label>
+            <label for="pMax">Max Players:<input type="number" id="pMax" name="pMax" placeholder="10"></label>
             <label for="age">Youngest Age:<input type="number" min="2" id="age" name="age" placeholder="8" required></label>
             <fieldset class="coopTypeField">
                 <legend>Co-op Type: </legend>
@@ -77,14 +77,14 @@
                 <label><input type="radio" id="comp" name="coopType" value="comp">Competitive</label>
             </fieldset>
             <label for="link" id="linkLabel">Instructions Link (Optional):<input type="text" id="link" name="link" placeholder="https://"></label>
-            <input type="hidden" id="board" name="gameType" value="board">
-            <input type="submit" value="Add Board Game">
+            <input type="hidden" id="board" name="gameType" value="video">
+            <input type="submit" value="Add Video Game">
         </form>
-        <h2>Edit A Board Game!</h2>
+        <h2>Edit A Video Game!</h2>
         <form id="editGame" method="get" action="edit_game.html">
             <label for="gid">What Game would you like to edit?<input type="number" placeholder="Game ID" required id="gid" name="gid"></label>
             <input type="submit" value="Edit Game">
-            <input type="hidden" name="gameType" value="board">
+            <input type="hidden" name="gameType" value="video">
         </form>
     </main>
     <footer>

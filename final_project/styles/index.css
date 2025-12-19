@@ -116,9 +116,24 @@ header span {
     text-decoration: underline;
 }
 
+/*************************** nav animation ***************************/
+@keyframes fadeNav {
+    from {
+        background-color: var(--secondary);
+        color: black;
+    }
+
+    to {
+        background-color: var(--primary);
+        color: var(--accent1);
+    }
+}
+
 .navigation li:hover,  .navigation li:hover a{
     background-color: var(--primary);
     color: var(--accent1);
+
+    animation: fadeNav 1s ease-in-out;
 }
 
 
@@ -248,6 +263,11 @@ h2 {
 #getGame fieldset:first-of-type {
     margin-bottom: 1rem;
 }
+
+#getGame fieldset legend {
+    padding: 0 5px;
+}
+
 
 /*************************** Footer ***************************/
 footer {

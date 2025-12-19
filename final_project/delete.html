@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Base Games</title>
+    <title>Delete</title>
     <meta name="author" content="Woodrow J. Snow">
-    <meta name="description" content="This page shows all of the base games that come preloaded to the site!">
+    <meta name="description" content="This page allows users to delete a game">
 
     <!-- font links -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -14,21 +14,19 @@
 
     <!-- css links -->
     <link rel="stylesheet" href="styles/index.css">
-    <link rel="stylesheet" href="styles/board.css">
-    <link rel="stylesheet" href="styles/empty.css">
+    <link rel="stylesheet" href="styles/delete.css">
 
     <!-- JS links -->
     <script src="scripts/navigation.js" defer></script>
     <script src="scripts/getdates.js" defer></script>
     <script src="scripts/getversion.js" defer></script>
-    <script type="module" src="scripts/base/base_main.mjs"></script>
 
     <!-- favicon link -->
     <link rel="icon" href="picker.ico">
 
     <!-- Social Media Properties -->
-    <meta property="og:title" content="Woodrows Game Picker | Base Games">
-    <meta property="og:description" content="This page shows all of the base games that come preloaded to the site!">
+    <meta property="og:title" content="Woodrows Game Picker | Delete">
+    <meta property="og:description" content="This page allows users to delete a game">
     <meta property="og:image" content="https://raw.githubusercontent.com/woodrow-snow/wdd231/refs/heads/main/final_project/images/woodrow_game_picker.png">
     <meta property="og:url" content="https://woodrow-snow.github.io/wdd231/final_project/index.html">
 </head>
@@ -40,29 +38,25 @@
     </header>
     <nav id="nav-bar" class="navigation">
         <ul>
-            <li><a href="index.html" class="current">Home</a></li>
+            <li><a href="index.html">Home</a></li>
             <li><a href="board.html">Board Games</a></li>
             <li><a href="card.html">Card Games</a></li>
+            <li><a href="delete.html" class="current">Delete</a></li>
             <li><a href="data.html">Data</a></li>
         </ul>
     </nav>
     <main>
-        <h1>Base Games</h1>
-        <h2 class="boardHeader">Here are all of the base games!</h2>
-        <h2 class="tableHidden">Your screen is too small right now to view the games you have added, turn your screen to go to a bigger device to view them all</h2>
-        <table>
-            <tr>
-                <th>ID</th>
-                <th>Name</th>
-                <th>Min Players</th>
-                <th>Max Players</th>
-                <th>Avg Time</th>
-                <th>Age</th>
-                <th>Co-op Type</th>
-                <th>Link</th>
-            </tr>
-        </table>
-        <a href="index.html" class="goBack">Go back!</a>
+        <h1>Delete a Game</h1>
+        <p>Please provide us with the Game id and game type and we will get your game deleted!</p>
+        <form id="deleteGame" method="get" action="confirm_delete.html">
+            <fieldset>
+                <legend>Game Type</legend>
+                <label><input type="radio" id="board" value="board" name="gameType" required>Board Game</label>
+                <label><input type="radio" id="card" value="card" name="gameType" required>Card Game</label>
+            </fieldset>
+            <label id="id">Game ID:<input type="number" id="gid" name="gid" required placeholder="1"></label>
+            <input type="submit" value="Delete Game">
+        </form>
     </main>
     <footer>
         <p>Current Verison: <span id="currentVersion"></span></p>

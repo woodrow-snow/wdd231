@@ -6,9 +6,9 @@
 [ ] - Add penguin dancing across the screen that says "Roes penguin" (easter egg)
 [ ] - Create a download both button on data.html
 [ ] - Add toggle for use of base games on home page in .base-games on index.html
-[ ] - Add animation to nav to shift color over time when hover over li element
 [ ] - Add video Game section
-[ ] - add delete function
+[ ] - a go back button on thank you page.
+[ ] - apply nav animation to all buttons?
 
 ---------- Completed Tasks ----------
 [X] - Add confirmation for uploading data
@@ -28,6 +28,9 @@
 [X] - add function to allow users to edit games
 [X] - !!! need to look into how data for co-opType is being handled by games entry, values are not what expected !!!
 [X] - add how to play link for user entered board and card games
+[X] - Add animation to nav to shift color over time when hover over li element
+[X] - add delete function
+
 
 ---------- Update 25.1 ----------
 * Added confirmation for uploading data
@@ -50,3 +53,9 @@
 * added link option to games
 * Fixing issue with same game being picked repeatedly
 * fixed issue where card and board games data didn't download
+
+---------- Update 25.4 ----------
+* added spacing to game and co-op type headings on home page
+* added animation to nav when you hover over an element
+* added a delete game page so users can delete unwanted games
+* added current version to footer

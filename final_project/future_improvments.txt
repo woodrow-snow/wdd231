@@ -67,3 +67,6 @@
 * added code to handle the event where an ID is provided that does not exist
 * added code to update ids after a game has been deleted
 * added a go back button on thank you page
+
+---------- Update 25.5.1 ----------
+* added platform field for video games

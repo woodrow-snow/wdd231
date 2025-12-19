@@ -219,6 +219,16 @@ function buildDialog(game, dialog){
     const age = document.createElement('p');
     age.textContent = `Ages ${game.age}+`
 
+    // checking if has platform, if it does create platform
+    let platform;
+    let hasPlatform = false;
+    if ('platform' in game) {
+        platform = document.createElement('p');
+        platform.textContent = `Platform: ${game.platform}`;
+        hasPlatform = true;
+    }
+
+
     const gameCoopType = document.createElement('p');
     gameCoopType.textContent = `Cooperation Type: ${game['co-opType']}`
 
@@ -249,6 +259,12 @@ function buildDialog(game, dialog){
     dialog.append(players);
     dialog.append(time);
     dialog.append(age);
+
+    // adding platform
+    if (hasPlatform) {
+        dialog.append(platform);
+    }
+
     dialog.append(gameCoopType);
 
     if (hasLink) {

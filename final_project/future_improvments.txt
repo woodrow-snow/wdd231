@@ -6,7 +6,7 @@
 [ ] - Add penguin dancing across the screen that says "Roes penguin" (easter egg)
 [ ] - Create a download both button on data.html
 [ ] - Add toggle for use of base games on home page in .base-games on index.html
-[ ] - Add video Game section
+[0] - Add video Game section
 [ ] - a go back button on thank you page.
 [ ] - apply nav animation to all buttons?
 
@@ -59,3 +59,6 @@
 * added animation to nav when you hover over an element
 * added a delete game page so users can delete unwanted games
 * added current version to footer
+
+---------- Update 25.5 ----------
+* Working on Adding Video Games page
